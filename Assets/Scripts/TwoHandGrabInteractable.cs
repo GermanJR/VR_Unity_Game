@@ -12,8 +12,8 @@ public class TwoHandGrabInteractable : XRGrabInteractable
     public enum TwoHandRotationType {None, First, Second}
     public TwoHandRotationType twoHandRotationType;
 
-    public Transform leftAttachTransform;
-    public Transform rightAttachTransform;
+    public GameObject rightHand;
+    public GameObject leftHand;
 
     private XRBaseInteractor secondInteractor;
     private PhotonView photonView;
@@ -85,10 +85,18 @@ public class TwoHandGrabInteractable : XRGrabInteractable
     protected override void OnSelectEntered(XRBaseInteractor args)
     {
         Debug.Log("First grab entered.");
-        //attachInitialRotation = transform.localRotation;
-        //attachInitialRotation = args.interactorObject.transform.localRotation;
+
         attachInitialRotation = args.attachTransform.localRotation;
         photonView.RequestOwnership();
+
+        if (args.CompareTag("Right Hand"))
+        {
+            rightHand.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else if (args.CompareTag("Left Hand"))
+        {
+            leftHand.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
         base.OnSelectEntered(args);
     }
     
@@ -98,9 +106,16 @@ public class TwoHandGrabInteractable : XRGrabInteractable
         Debug.Log("First grab exited.");
         base.OnSelectExited(args);
         secondInteractor = null;
-        //transform.localRotation = attachInitialRotation;
-        //args.interactorObject.transform.localRotation = attachInitialRotation;
         args.attachTransform.localRotation = attachInitialRotation;
+
+        if (args.CompareTag("Right Hand"))
+        {
+            rightHand.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else if (args.CompareTag("Left Hand"))
+        {
+            leftHand.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     public override bool IsSelectableBy(IXRSelectInteractor interactor)
