@@ -8,6 +8,8 @@ TagManager:
   - Right Hand
   - AutomaticGun
   - Button
+  - Destroyer
+  - Can
   layers:
   - Default
   - TransparentFX
