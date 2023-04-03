@@ -33,7 +33,6 @@ public class ShootingAutoDoorBehaviour : MonoBehaviour
 
             cansRemaining = GameObject.FindGameObjectsWithTag("Can").Length;
             textRemainignCans.text = cansRemaining.ToString();
-            Debug.Log("Remaining cans = " + cansRemaining);
         }
     }
 }

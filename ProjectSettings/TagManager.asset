@@ -10,6 +10,7 @@ TagManager:
   - Button
   - Destroyer
   - Can
+  - EnergyCell
   layers:
   - Default
   - TransparentFX
