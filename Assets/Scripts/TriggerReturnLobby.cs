@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class TriggerReturnLobby : MonoBehaviour
 {
+
+    public LevelLoader levelLoader;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("LobbyScene");
+            levelLoader.LoadNewScene("LobbyScene");
         }
     }
 }
