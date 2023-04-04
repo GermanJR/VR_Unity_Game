@@ -9,6 +9,7 @@ public class BatterySocketBehaviour : XRSocketInteractor
     public GameObject lightSphere;
     public GameObject canvasError;
     public GameObject cell;
+    public GameObject insideAntiTeleport;
     public Animator doorAnimator;
     public Animator closerAnimator;
 
@@ -32,6 +33,7 @@ public class BatterySocketBehaviour : XRSocketInteractor
             closerAnimator.SetTrigger("Close");
             StartCoroutine(DisableCellCoroutine());
             hasCellEntered = true;
+            Destroy(insideAntiTeleport);
         }
         else
         {

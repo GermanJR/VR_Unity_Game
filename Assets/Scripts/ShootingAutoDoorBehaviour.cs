@@ -8,6 +8,7 @@ public class ShootingAutoDoorBehaviour : MonoBehaviour
     public Animator doorAnimator;
     public GameObject canvas;
     public TMP_Text textRemainignCans;
+    public GameObject insideAntiTeleport;
 
     private int cansRemaining = -1;
     private bool isOpened = false;
@@ -29,6 +30,7 @@ public class ShootingAutoDoorBehaviour : MonoBehaviour
                 Destroy(canvas);
                 Debug.Log("All cans destroyed.");
                 isOpened = true;
+                Destroy(insideAntiTeleport);
             }
 
             cansRemaining = GameObject.FindGameObjectsWithTag("Can").Length;
