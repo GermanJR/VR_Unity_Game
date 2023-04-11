@@ -10,11 +10,15 @@ public class FireBulletActivate : MonoBehaviour
     public Transform spawnPoint;
     public float fireSpeed = 20;
 
+    private AudioSource shotSound;
+
     // Start is called before the first frame update
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(FireBullet);
+
+        shotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +29,8 @@ public class FireBulletActivate : MonoBehaviour
 
     public void FireBullet(ActivateEventArgs args)
     {
+        shotSound.Play();
+
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;

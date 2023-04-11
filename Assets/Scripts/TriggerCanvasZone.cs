@@ -6,12 +6,20 @@ public class TriggerCanvasZone : MonoBehaviour
 {
 
     private Animator canvasAnimator;
-    
+    private AudioSource[] sounds;
+
+    private AudioSource enterSound;
+    private AudioSource hideSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
         canvasAnimator = transform.parent.gameObject.GetComponent<Animator>();
+        sounds = GetComponents<AudioSource>();
+
+        enterSound = sounds[0];
+        hideSound = sounds[1];
     }
 
     // Update is called once per frame
@@ -27,7 +35,7 @@ public class TriggerCanvasZone : MonoBehaviour
         {
             Debug.Log("Trigger entered correct");
             canvasAnimator.SetTrigger("Enter");
-            
+            enterSound.Play();
         }
     }
 
@@ -38,6 +46,7 @@ public class TriggerCanvasZone : MonoBehaviour
         {
             Debug.Log("Exited was correct");
             canvasAnimator.SetTrigger("Hide");
+            hideSound.Play();
         }
     }
 }
