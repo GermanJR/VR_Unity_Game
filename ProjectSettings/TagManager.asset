@@ -11,6 +11,8 @@ TagManager:
   - Destroyer
   - Can
   - EnergyCell
+  - FallZone
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
