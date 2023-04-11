@@ -610,7 +610,7 @@ MonoBehaviour:
     m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_RightHandMoveAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Right Hand Move
       m_Type: 0
@@ -6477,7 +6477,7 @@ PrefabInstance:
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.877
+      value: -2.926
       objectReference: {fileID: 0}
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
@@ -9329,7 +9329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.41, y: 1.718}
+  m_AnchoredPosition: {x: 1.448, y: 1.87}
   m_SizeDelta: {x: 1101, y: 464}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &962980636
@@ -11641,13 +11641,13 @@ MonoBehaviour:
   defaultRooms:
   - name: Sandbox
     sceneIndex: 1
-    maxPlayers: 12
-  - name: Room2
+    maxPlayers: 1
+  - name: ParkourRace
     sceneIndex: 2
-    maxPlayers: 10
+    maxPlayers: 2
   - name: Room3
     sceneIndex: 3
-    maxPlayers: 10
+    maxPlayers: 2
   roomUI: {fileID: 1323538744}
 --- !u!4 &1330290403
 Transform:
@@ -12128,7 +12128,7 @@ PrefabInstance:
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.876
+      value: -2.925
       objectReference: {fileID: 0}
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
@@ -14410,7 +14410,7 @@ PrefabInstance:
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.876
+      value: -2.925
       objectReference: {fileID: 0}
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
@@ -14697,8 +14697,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116348155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.044, y: 0.5, z: -2.376}
-  m_LocalScale: {x: 2.6202054, y: 1, z: 1}
+  m_LocalPosition: {x: -0.044, y: 0.811, z: -2.376}
+  m_LocalScale: {x: 2.6202054, y: 1.6669592, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
