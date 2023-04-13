@@ -10830,7 +10830,7 @@ PrefabInstance:
     - target: {fileID: 9153090004850490024, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -672.00006
+      value: -672
       objectReference: {fileID: 0}
     - target: {fileID: 9153090004909974105, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
@@ -10900,7 +10900,7 @@ PrefabInstance:
     - target: {fileID: 9153090005756989539, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -678.00006
+      value: -678
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ea1bf79c5ac3b2428a7402233e233ca, type: 3}
@@ -14382,7 +14382,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
