@@ -10,13 +10,15 @@ public class ShootingAutoDoorBehaviour : MonoBehaviour
     public TMP_Text textRemainignCans;
     public GameObject insideAntiTeleport;
 
+    private AudioSource openSound;
+
     private int cansRemaining = -1;
     private bool isOpened = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        openSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class ShootingAutoDoorBehaviour : MonoBehaviour
         {
             if (cansRemaining == 0)
             {
+                openSound.Play();
                 doorAnimator.SetTrigger("open");
                 Destroy(canvas);
                 Debug.Log("All cans destroyed.");
