@@ -13,6 +13,7 @@ TagManager:
   - EnergyCell
   - FallZone
   - Checkpoint
+  - BreakPlatform
   layers:
   - Default
   - TransparentFX
