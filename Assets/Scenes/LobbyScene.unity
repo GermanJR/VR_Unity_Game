@@ -447,6 +447,7 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   ray: {fileID: 472023274}
+  rightDirectInteractor: {fileID: 1824926211}
 --- !u!114 &101508896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6579,7 +6580,7 @@ PrefabInstance:
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.926
+      value: -2.924
       objectReference: {fileID: 0}
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
@@ -12361,7 +12362,7 @@ PrefabInstance:
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.925
+      value: -2.924
       objectReference: {fileID: 0}
     - target: {fileID: 7261547210888614870, guid: a8fa3d785a0778c45ad2984740895d5e,
         type: 3}
