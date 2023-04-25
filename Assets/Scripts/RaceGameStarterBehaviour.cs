@@ -43,7 +43,6 @@ public class RaceGameStarterBehaviour : MonoBehaviour
     {
         if (isPlayer1Ready && isPlayer2Ready)
         {
-            Debug.Log("Race is about to start.");
             startRaceAudio.Play();
             StartCoroutine(StartRaceCoroutine());
         }
@@ -58,6 +57,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
         startBarrierAnimator.SetTrigger("Open");
         yield return new WaitForSeconds(1f);
         textPlayerStart.text = "";
+        Destroy(gameObject);
     }
 
     public void ChangeStatesForPlayer1()
