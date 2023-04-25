@@ -28,6 +28,8 @@ public class RaceGameStarterBehaviour : MonoBehaviour
 
     private AudioSource startRaceAudio;
 
+    private bool hasRaceStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,22 +43,33 @@ public class RaceGameStarterBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hasRaceStarted)
+        {
+            return;
+        }
+
         if (isPlayer1Ready && isPlayer2Ready)
         {
             startRaceAudio.Play();
             StartCoroutine(StartRaceCoroutine());
+            hasRaceStarted = true;
         }
     }
 
     IEnumerator StartRaceCoroutine()
     {
         playerStartSeparator.SetActive(true);
-        textPlayerStart.text = "READY?";
-        yield return new WaitForSeconds(2f);
+        textPlayerStart.text = "3";
+        yield return new WaitForSeconds(1f);
+        textPlayerStart.text = "2";
+        yield return new WaitForSeconds(1f);
+        textPlayerStart.text = "1";
+        yield return new WaitForSeconds(1f);
         textPlayerStart.text = "GO!";
         startBarrierAnimator.SetTrigger("Open");
         yield return new WaitForSeconds(1f);
         textPlayerStart.text = "";
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 
