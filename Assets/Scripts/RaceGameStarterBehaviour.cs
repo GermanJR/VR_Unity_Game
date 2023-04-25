@@ -8,8 +8,8 @@ using Photon.Pun;
 
 public class RaceGameStarterBehaviour : MonoBehaviour
 {
-    public static bool isPlayer1Ready = false;
-    public static bool isPlayer2Ready = false;
+    private bool isPlayer1Ready = false;
+    private bool isPlayer2Ready = false;
 
     [SerializeField] private GameObject playerStartSeparator;
     [SerializeField] private GameObject textObject;
@@ -26,6 +26,8 @@ public class RaceGameStarterBehaviour : MonoBehaviour
 
     private PhotonView photonView;
 
+    private AudioSource startRaceAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
         textPlayerStart.text = "";
 
         photonView = GetComponent<PhotonView>();
+        startRaceAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +44,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
         if (isPlayer1Ready && isPlayer2Ready)
         {
             Debug.Log("Race is about to start.");
+            startRaceAudio.Play();
             StartCoroutine(StartRaceCoroutine());
         }
     }
@@ -86,6 +90,8 @@ public class RaceGameStarterBehaviour : MonoBehaviour
             player1NotReadyTexts[i].SetActive(!player1NotReadyTexts[i].activeSelf);
             player1ReadyTexts[i].SetActive(!player1ReadyTexts[i].activeSelf);
         }
+
+        isPlayer1Ready = !isPlayer1Ready;
     }
 
     [PunRPC]
@@ -96,5 +102,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
             player2NotReadyTexts[i].SetActive(!player2NotReadyTexts[i].activeSelf);
             player2ReadyTexts[i].SetActive(!player2ReadyTexts[i].activeSelf);
         }
+
+        isPlayer2Ready = !isPlayer2Ready;
     }
 }

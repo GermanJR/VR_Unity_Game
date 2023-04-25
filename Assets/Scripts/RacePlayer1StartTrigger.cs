@@ -17,7 +17,6 @@ public class RacePlayer1StartTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            RaceGameStarterBehaviour.isPlayer1Ready = true;
             raceGameStarterBehaviour.ChangeStatesForPlayer1();
             //SwitchTexts();
             Debug.Log("Player1 is ready");
@@ -28,7 +27,6 @@ public class RacePlayer1StartTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            RaceGameStarterBehaviour.isPlayer1Ready = false;
             raceGameStarterBehaviour.ChangeStatesForPlayer1();
             //SwitchTexts();
             Debug.Log("Player1 exited zone");
