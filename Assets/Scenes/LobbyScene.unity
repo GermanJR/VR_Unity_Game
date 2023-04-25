@@ -15198,6 +15198,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2044915000}
+    - target: {fileID: 9153090005700650336, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153090005700650338, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 8191
+      objectReference: {fileID: 0}
     - target: {fileID: 9153090005756989539, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
