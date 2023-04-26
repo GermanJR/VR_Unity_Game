@@ -14,9 +14,16 @@ public class BatterySocketBehaviour : XRSocketInteractor
     public Animator closerAnimator;
 
     private DoorLightBehaviour doorLightBehaviour;
+    private AudioSource openSound;
 
 
     private bool hasCellEntered = false;
+
+    protected override void Start()
+    {
+        base.Start();
+        openSound = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,6 +35,7 @@ public class BatterySocketBehaviour : XRSocketInteractor
     {
         if (args.interactableObject.transform.CompareTag("EnergyCell"))
         {
+            openSound.Play();
             doorLightBehaviour.ChangeToGreenLight();
             doorAnimator.SetTrigger("Open");
             closerAnimator.SetTrigger("Close");

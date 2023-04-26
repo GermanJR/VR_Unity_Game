@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -24,5 +25,18 @@ public class LevelLoader : MonoBehaviour
         animator.SetTrigger("Start");
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void LeaveRoomAndGoToLobby()
+    {
+        StartCoroutine(DisconnectAndReturnLobby());
+    }
+
+    IEnumerator DisconnectAndReturnLobby()
+    {
+        animator.SetTrigger("Start");
+        yield return new WaitForSeconds(2f);
+        PhotonNetwork.Disconnect();
+        PhotonNetwork.LoadLevel(0);
     }
 }
