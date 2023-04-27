@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RacePlayer2WinTrigger : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class RacePlayer2WinTrigger : MonoBehaviour
     [SerializeField] private Animator player2CanvasAnimator;
 
     [SerializeField] private List<GameObject> player2ConfettiSystem;
+
+    [SerializeField] private UnityEvent playVictoryToneEvent;
+
+    private bool hasPlayerWon = false;
 
 
     // Start is called before the first frame update
@@ -27,12 +32,19 @@ public class RacePlayer2WinTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (hasPlayerWon)
+        {
+            return;
+        }
+
         if (other.CompareTag("Player"))
         {
             Destroy(player1TriggerToDestroy);
             player2WinCanvas.SetActive(true);
             player2CanvasAnimator.SetTrigger("Enter");
             ActivateConfetti();
+            playVictoryToneEvent.Invoke();
+            hasPlayerWon = true;
             Debug.Log("Player2 wins!");
         }
     }

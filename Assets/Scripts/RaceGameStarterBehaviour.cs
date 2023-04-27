@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Photon.Pun;
 
@@ -13,6 +14,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
 
     [SerializeField] private GameObject playerStartSeparator;
     [SerializeField] private GameObject textObject;
+    [SerializeField] private GameObject UICanvas;
 
     [SerializeField] private Animator startBarrierAnimator;
 
@@ -21,6 +23,8 @@ public class RaceGameStarterBehaviour : MonoBehaviour
 
     [SerializeField] private List<GameObject> player2NotReadyTexts;
     [SerializeField] private List<GameObject> player2ReadyTexts;
+
+    [SerializeField] private UnityEvent changeToRaceMusicEvent;
 
     private TMP_Text textPlayerStart;
 
@@ -51,6 +55,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
         if (isPlayer1Ready && isPlayer2Ready)
         {
             startRaceAudio.Play();
+            changeToRaceMusicEvent.Invoke();
             StartCoroutine(StartRaceCoroutine());
             hasRaceStarted = true;
         }
@@ -58,6 +63,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
 
     IEnumerator StartRaceCoroutine()
     {
+        UICanvas.SetActive(false);
         playerStartSeparator.SetActive(true);
         textPlayerStart.text = "3";
         yield return new WaitForSeconds(1f);
@@ -83,7 +89,7 @@ public class RaceGameStarterBehaviour : MonoBehaviour
 
         photonView.RPC("UpdateStateOverNetworkP1", RpcTarget.All);
     }
-  
+
     public void ChangeStatesForPlayer2()
     {
         if (player2NotReadyTexts.Count != player2ReadyTexts.Count)
