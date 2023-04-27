@@ -30,10 +30,8 @@ public class TriggerCanvasZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Got trigger entered: " + other);
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Trigger entered correct");
             canvasAnimator.SetTrigger("Enter");
             enterSound.Play();
         }
@@ -41,10 +39,8 @@ public class TriggerCanvasZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exited trigger: " + other);
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Exited was correct");
             canvasAnimator.SetTrigger("Hide");
             hideSound.Play();
         }
