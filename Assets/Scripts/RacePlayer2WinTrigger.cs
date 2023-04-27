@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Photon.Pun;
 
 public class RacePlayer2WinTrigger : MonoBehaviour
 {
@@ -15,13 +16,15 @@ public class RacePlayer2WinTrigger : MonoBehaviour
 
     [SerializeField] private UnityEvent playVictoryToneEvent;
 
+    private PhotonView photonView;
+
     private bool hasPlayerWon = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -39,17 +42,24 @@ public class RacePlayer2WinTrigger : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            Destroy(player1TriggerToDestroy);
-            player2WinCanvas.SetActive(true);
-            player2CanvasAnimator.SetTrigger("Enter");
-            ActivateConfetti();
-            playVictoryToneEvent.Invoke();
-            hasPlayerWon = true;
-            Debug.Log("Player2 wins!");
+            photonView.RPC("SendPlayer2VictoryOverNetwork", RpcTarget.All);
         }
     }
 
-    private void ActivateConfetti()
+    [PunRPC]
+    private void SendPlayer2VictoryOverNetwork()
+    {
+        Destroy(player1TriggerToDestroy);
+        player2WinCanvas.SetActive(true);
+        player2CanvasAnimator.SetTrigger("Enter");
+        photonView.RPC("ActivateConfettiOverTheNetwork", RpcTarget.All);
+        playVictoryToneEvent.Invoke();
+        hasPlayerWon = true;
+        Debug.Log("Player2 wins!");
+    }
+
+    [PunRPC]
+    private void ActivateConfettiOverTheNetwork()
     {
         if (player2ConfettiSystem == null || player2ConfettiSystem.Count == 0)
         {

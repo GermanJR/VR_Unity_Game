@@ -45,6 +45,9 @@ MonoBehaviour:
   - UpdateStateOverNetwork
   - UpdateStateOverNetworkP1
   - UpdateStateOverNetworkP2
+  - ActivateConfettiOverTheNetwork
+  - SendPlayer1VictoryOverNetwork
+  - SendPlayer2VictoryOverNetwork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

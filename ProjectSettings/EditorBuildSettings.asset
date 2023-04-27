@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ParkourRace.unity
     guid: 521c7354eb112d54a9bb712dd1ecc4ef
   - enabled: 1
-    path: Assets/Scenes/Room 3.unity
+    path: Assets/Scenes/ShootingAlley.unity
     guid: 415bc4b4383ef8c41848c828e8370ce3
   - enabled: 1
     path: Assets/Scenes/InstructionsScene.unity
