@@ -1,0 +1,1983 @@
+fileFormatVersion: 2
+guid: 48ba4b3e30686a04a89582bd7becafa7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RaceFlagSprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4862
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a351380dea17a63419ecd03de1dcdba4
+      internalID: 719808647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_1
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 4862
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72a9276ebbc8e04385bc4886f1ea9b5
+      internalID: 1717265731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_2
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 4862
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfbc40560a71a74ca878d7757325d0b
+      internalID: 1683691289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_3
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 4862
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b627ad3ac4a3649bfaf7abb06357f4
+      internalID: 1916836714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_4
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 4862
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce16c42a8a8f0a54e857506cb238db8e
+      internalID: 1643834729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_5
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 4862
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37056e214cb6394890bb2f64e3b94df
+      internalID: 487803811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_6
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 4862
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e6225d6786ef24abd7dbb3b1dd2b69
+      internalID: 1138640082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4420
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1260ce46c8b7b4593735d8c3a36588
+      internalID: 358030336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_8
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 4420
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3589a2f987e1a4e99c35b4eadabe93
+      internalID: 1281575922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_9
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 4420
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d5739cb098c274cb91800ec25a2e81
+      internalID: 2072047967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_10
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 4420
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5ca0a5b2785fc4fb081afe5160bae1
+      internalID: -1791115673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_11
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 4420
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88a84efcef609c4682da3a14695c4df
+      internalID: -2066748582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_12
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 4420
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21342aea1dd60b4eaa89f4944b48e51
+      internalID: -1812895046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_13
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 4420
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6583c06f3f11f0343b561971e0666ae1
+      internalID: 1135954620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3978
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050d35fdab7d61348b21c7d55a6d112a
+      internalID: -1035822345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_15
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 3978
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37a3d58b804efd4cb03ee303f9fcfb1
+      internalID: -344333566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_16
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 3978
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1637ccecb1c4547936a07fc2407a23
+      internalID: -24795642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_17
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 3978
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef13a7bc7a8e3c4199def0ef31e808f
+      internalID: 167303273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_18
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 3978
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9059863940af49409a76c66b8a45432
+      internalID: 931659453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_19
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 3978
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87afc41a81fba2e41ad14c0a47a0c503
+      internalID: 209129945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_20
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 3978
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a797d5ec94e0dec438e81064e7541c60
+      internalID: 231064690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3536
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3597a0ec93af44fbe88a84b62a2592
+      internalID: -1184382715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_22
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 3536
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d29bf308bb3ad42af4e1ff26d59c8f
+      internalID: 1695927975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_23
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 3536
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a848ba3b8b9c2c4f9a71acf95e9f087
+      internalID: -619002711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_24
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 3536
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6da60674afd74645b4d60063afcc684
+      internalID: 453531594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_25
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 3536
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908d03ec93eaff14389a37b066c74dc9
+      internalID: 1615286197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_26
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 3536
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be43a508df49aa42bf3caa68be2edeb
+      internalID: -532230385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_27
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 3536
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84845a1fa5f6aeb4e95fb22a416e155b
+      internalID: 1321901264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3094
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e112d238f5c9746ae33cc995a67997
+      internalID: -807060518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_29
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 3094
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc463290d86b78b428c35e778de35a1f
+      internalID: -144968634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_30
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 3094
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7149aaf8397d7246be4389bfc1482ea
+      internalID: -2079300656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_31
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 3094
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebc8e7327f4f9444abfc3138fab0c9a
+      internalID: -1410735579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_32
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 3094
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cb5e77b3e7fce4aa69d27c42c82d35
+      internalID: 1423125664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_33
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 3094
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c23f574623cf7449bf41a521a14304e
+      internalID: 1627352645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_34
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 3094
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0d2c2088d2b35458775f4b30bc8cf9
+      internalID: 161327973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2652
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f1d4401ba4d6e42982eea2e4ce4558
+      internalID: -226150002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_36
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 2652
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cfb5ccab1ad0a47b472d2b335c0744
+      internalID: -1258010661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_37
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 2652
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ad1a6c04e07bd408dedcdd4de69b98
+      internalID: 113778902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_38
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 2652
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a622ee53a563249aff7d16a05685bc
+      internalID: 1498277924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_39
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 2652
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd4df9fbb2c5c44b9e2ed9e2effa75e
+      internalID: -78786745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_40
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 2652
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d65bbc5d774bb47bea2df41536097d
+      internalID: -985387065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_41
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 2652
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec6e9c093a83a342b9fdf04436d94d8
+      internalID: -361769296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2210
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326c1f7fe46a5e9469cf0882421fcf8b
+      internalID: -1591826013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_43
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 2210
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53384cf4a0122c14a86ec662fe9dd5e1
+      internalID: 673281310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_44
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 2210
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610c9f35e94c09c4c9e3aea84f94c27c
+      internalID: 367617176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_45
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 2210
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0758ecf42c2094345b5f9eaed875e53a
+      internalID: 363765374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_46
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 2210
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd94827c795565d4fa7083cfdfca802f
+      internalID: -945276318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_47
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 2210
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0044e13c997c94e8d637f605814bc9
+      internalID: -1989563470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_48
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 2210
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbcdddbb1f8d6e4ea54bd9fe326bfbb
+      internalID: 1431320924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1768
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1deb95bafcdc44d95d3cd1d96b1f8f
+      internalID: 379651302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_50
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1768
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de5a0cc1e0d1f945a1da72564c91742
+      internalID: 546373542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_51
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1768
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39162328e7163594f9e1ea5e477001a0
+      internalID: 394947222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_52
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1768
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f0e6e3f0d14dd4d900b6a0e1af0026
+      internalID: 1447110092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_53
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 1768
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df96700fc32b3f409ddd2f2edf62918
+      internalID: 1765601857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_54
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 1768
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9184c50bcc7af1047b87f59c9ddfa4b3
+      internalID: -1104231037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_55
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1768
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbad1a5b9be03d2489d68f567ee2a90e
+      internalID: 1672299769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1326
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1de8d8c6ac65d14187bcf1504404e40
+      internalID: -1209029398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_57
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1326
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dfc3050531c6e4e86838fa6bcfbc11
+      internalID: -1544857286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_58
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1326
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171603fc800aa3042bd30e7d1c643484
+      internalID: 575640806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_59
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1326
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4e05b6920294d489b500474f55be8e
+      internalID: 615677055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_60
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 1326
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2666d7dcce43f3458f0be2d7b874593
+      internalID: -11339367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_61
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 1326
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcec0461665e544280fff72863c014b
+      internalID: -1091283426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_62
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1326
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29df4f668940da4a93db37b26785ea9
+      internalID: 1191221472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 884
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8bd849a787c844080ac0cef8209771
+      internalID: 1787056368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_64
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 884
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9914cc6e45f33664ba1fa64ec0c50b2a
+      internalID: -407682190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_65
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 884
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64f68af6789cc8498e69ea9888fbf81
+      internalID: -1533365776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_66
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 884
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5749d1fe375973d459df74e722b516e8
+      internalID: -199660319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_67
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 884
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1768a9797b865b4b9e72f2e9167f15c
+      internalID: 1326924742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_68
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 884
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2c8bab0a5ee1b4d9aecbe755ac0e3d
+      internalID: -1375948929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_69
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 884
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30583ae62d3a6f4ead5fe2dede7dffd
+      internalID: 1283525570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 442
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da030e799d7dcc43b0f8a9f50fae73b
+      internalID: -2050577913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_71
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 442
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c063583a6830cf240baf67681960c840
+      internalID: 380254699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_72
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 442
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5d70ba173b5944cb25c0fefeeef3bd
+      internalID: -278364397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_73
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 442
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6dc65621384d444af7ca2ee3d59b87
+      internalID: -917754960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_74
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 442
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ddf6c2671d8b343b8e9c2d5de5cb39
+      internalID: -698546586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_75
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 442
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60313be8097adfb4fb12f65305a61687
+      internalID: -636443019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_76
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 442
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4365af9fdd09aac48b4c8da52b3c9af4
+      internalID: -1200665013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca10173b44a61d449ae5c6ac3d1529d3
+      internalID: 976942894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_78
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711f43bc16215c845a6a5f2a4d7bd7ee
+      internalID: 480932079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_79
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 0
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79d15e2264d1a5458f499dbf51ba90f
+      internalID: 1654789927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_80
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 0
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407a77bcc2af43c4c9dd688b1abf706a
+      internalID: 1599805685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_81
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 0
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4274d1c5001aea74ebd8cf33f4b97df0
+      internalID: -338838403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_82
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 0
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f83ecf1bf89ac04091a951fd3f77344
+      internalID: 304574935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RaceFlagSprite_83
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 0
+        width: 442
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee16e9d171641da459626966a215d787
+      internalID: 1122953490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 915b7d4b7f5a07e4aa9f8cabf84e31ce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RaceFlagSprite_0: 719808647
+      RaceFlagSprite_1: 1717265731
+      RaceFlagSprite_10: -1791115673
+      RaceFlagSprite_11: -2066748582
+      RaceFlagSprite_12: -1812895046
+      RaceFlagSprite_13: 1135954620
+      RaceFlagSprite_14: -1035822345
+      RaceFlagSprite_15: -344333566
+      RaceFlagSprite_16: -24795642
+      RaceFlagSprite_17: 167303273
+      RaceFlagSprite_18: 931659453
+      RaceFlagSprite_19: 209129945
+      RaceFlagSprite_2: 1683691289
+      RaceFlagSprite_20: 231064690
+      RaceFlagSprite_21: -1184382715
+      RaceFlagSprite_22: 1695927975
+      RaceFlagSprite_23: -619002711
+      RaceFlagSprite_24: 453531594
+      RaceFlagSprite_25: 1615286197
+      RaceFlagSprite_26: -532230385
+      RaceFlagSprite_27: 1321901264
+      RaceFlagSprite_28: -807060518
+      RaceFlagSprite_29: -144968634
+      RaceFlagSprite_3: 1916836714
+      RaceFlagSprite_30: -2079300656
+      RaceFlagSprite_31: -1410735579
+      RaceFlagSprite_32: 1423125664
+      RaceFlagSprite_33: 1627352645
+      RaceFlagSprite_34: 161327973
+      RaceFlagSprite_35: -226150002
+      RaceFlagSprite_36: -1258010661
+      RaceFlagSprite_37: 113778902
+      RaceFlagSprite_38: 1498277924
+      RaceFlagSprite_39: -78786745
+      RaceFlagSprite_4: 1643834729
+      RaceFlagSprite_40: -985387065
+      RaceFlagSprite_41: -361769296
+      RaceFlagSprite_42: -1591826013
+      RaceFlagSprite_43: 673281310
+      RaceFlagSprite_44: 367617176
+      RaceFlagSprite_45: 363765374
+      RaceFlagSprite_46: -945276318
+      RaceFlagSprite_47: -1989563470
+      RaceFlagSprite_48: 1431320924
+      RaceFlagSprite_49: 379651302
+      RaceFlagSprite_5: 487803811
+      RaceFlagSprite_50: 546373542
+      RaceFlagSprite_51: 394947222
+      RaceFlagSprite_52: 1447110092
+      RaceFlagSprite_53: 1765601857
+      RaceFlagSprite_54: -1104231037
+      RaceFlagSprite_55: 1672299769
+      RaceFlagSprite_56: -1209029398
+      RaceFlagSprite_57: -1544857286
+      RaceFlagSprite_58: 575640806
+      RaceFlagSprite_59: 615677055
+      RaceFlagSprite_6: 1138640082
+      RaceFlagSprite_60: -11339367
+      RaceFlagSprite_61: -1091283426
+      RaceFlagSprite_62: 1191221472
+      RaceFlagSprite_63: 1787056368
+      RaceFlagSprite_64: -407682190
+      RaceFlagSprite_65: -1533365776
+      RaceFlagSprite_66: -199660319
+      RaceFlagSprite_67: 1326924742
+      RaceFlagSprite_68: -1375948929
+      RaceFlagSprite_69: 1283525570
+      RaceFlagSprite_7: 358030336
+      RaceFlagSprite_70: -2050577913
+      RaceFlagSprite_71: 380254699
+      RaceFlagSprite_72: -278364397
+      RaceFlagSprite_73: -917754960
+      RaceFlagSprite_74: -698546586
+      RaceFlagSprite_75: -636443019
+      RaceFlagSprite_76: -1200665013
+      RaceFlagSprite_77: 976942894
+      RaceFlagSprite_78: 480932079
+      RaceFlagSprite_79: 1654789927
+      RaceFlagSprite_8: 1281575922
+      RaceFlagSprite_80: 1599805685
+      RaceFlagSprite_81: -338838403
+      RaceFlagSprite_82: 304574935
+      RaceFlagSprite_83: 1122953490
+      RaceFlagSprite_9: 2072047967
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
