@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8191
 --- !u!114 &97967365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15672,12 +15672,12 @@ MonoBehaviour:
   m_text: 'A ROOM CAN BE MULTIPLAYER OR SINGLEPLAYER.
 
 
-    A MULTIPLAYER ROOM HAS
-    A MINIMUM AND A MAXIMUM AMOUNT OF PLAYERS.
+    YOU WILL SEE MORE DETAILS
+    WHEN YOU SELECT A ROOM ON THE LOBBY, LIKE THE NUMBER OF PLAYERS FOR EXAMPLE.
 
 
-    EACH ROOM WILL SHOW YOU THE
-    DETAILS WHEN YOU ENTER.'
+    CLICK
+    ON "INSTRUCTIONS" BUTTON TO SHOW MORE INFO ABOUT THE ROOM.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19786,7 +19786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902667867}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
-  m_LocalPosition: {x: -0.6343298, y: 2.0488997, z: -1.7466278}
+  m_LocalPosition: {x: -0.6343298, y: 2.0488997, z: -1.747}
   m_LocalScale: {x: 1.3276443, y: 4.3734536, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
