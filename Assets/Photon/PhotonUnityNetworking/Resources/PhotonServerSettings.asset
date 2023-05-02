@@ -48,6 +48,11 @@ MonoBehaviour:
   - ActivateConfettiOverTheNetwork
   - SendPlayer1VictoryOverNetwork
   - SendPlayer2VictoryOverNetwork
+  - SwitchBarriersOverNetwork
+  - SpawnM4Overnetwork
+  - SpawnM4OverNetwork
+  - SpawnPistolsOverNetwork
+  - DeactivateZonesOverNetwork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
