@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 7824435719531344627}
   - component: {fileID: 3086239449061454693}
   m_Layer: 0
-  m_Name: Bullet Alley
-  m_TagString: PistolBullet
+  m_Name: Bullet AlleyM4
+  m_TagString: M4Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

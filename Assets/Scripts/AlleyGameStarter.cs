@@ -18,6 +18,8 @@ public class AlleyGameStarter : MonoBehaviour
 
     [SerializeField] private GameObject textObject;
 
+    [SerializeField] private HealthBarManager healthBarManager;
+
     private bool isPlayer1Ready = false;
     private bool isPlayer2Ready = false;
     private bool hasMatchStarted = false;
@@ -65,6 +67,7 @@ public class AlleyGameStarter : MonoBehaviour
         m4Spawner.SpawnM4();
 
         photonView.RPC("DeactivateZonesOverNetwork", RpcTarget.All);
+        healthBarManager.ActivateHealthBars();
 
         yield return new WaitForSeconds(1f);
         
