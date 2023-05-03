@@ -23,6 +23,10 @@ public class LevelLoader : MonoBehaviour
         {
             Debug.Log("Current scene doesn't need network reference.");
         }
+        catch (System.NullReferenceException)
+        {
+            Debug.Log("Current scene doesn't need network reference.");
+        }
     }
 
     // Update is called once per frame

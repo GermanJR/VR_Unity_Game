@@ -11,6 +11,7 @@ public class NetworkPlayer : MonoBehaviourPun
     public Transform head;
     public Transform rightHand;
     public Transform leftHand;
+    public Transform body;
 
     public Animator rightHandAnimator;
     public Animator leftHandAnimator;
@@ -18,6 +19,8 @@ public class NetworkPlayer : MonoBehaviourPun
     private Transform headOrigin;
     private Transform rightHandOrigin;
     private Transform leftHandOrigin;
+    private Transform bodyOrigin;
+
 
     //private PhotonView photonView;
 
@@ -29,6 +32,7 @@ public class NetworkPlayer : MonoBehaviourPun
         headOrigin = origin.transform.Find("Camera Offset/Main Camera");
         rightHandOrigin = origin.transform.Find("Camera Offset/RightHand");
         leftHandOrigin = origin.transform.Find("Camera Offset/LeftHand");
+        bodyOrigin = origin.transform.Find("Camera Offset/Body");
     }
 
     // Update is called once per frame
@@ -39,10 +43,12 @@ public class NetworkPlayer : MonoBehaviourPun
             head.gameObject.SetActive(false);
             rightHand.gameObject.SetActive(false);
             leftHand.gameObject.SetActive(false);
+            body.gameObject.SetActive(false);
 
             MapPosition(head, headOrigin);
             MapPosition(rightHand, rightHandOrigin);
             MapPosition(leftHand, leftHandOrigin);
+            MapPosition(body, bodyOrigin);
         }
     }
 
