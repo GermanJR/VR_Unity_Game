@@ -1,13 +1,17 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
-public class PlayerHealthController : MonoBehaviour
+public class PlayerHealthController : MonoBehaviourPun
 {
-    [SerializeField] private HealthBarManager healthBarManager;
+    private HealthBarManager healthBarManager;
 
     private const int PISTOL_BULLET_DAMAGE = 8;
     private const int M4_BULLET_DAMAGE = 5;
+
+    private bool isPlayerDead = false;
 
     private float health = 300f;
 
@@ -20,34 +24,30 @@ public class PlayerHealthController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
+        Debug.Log("Health bar manager is: " + healthBarManager);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Health <= 0)
+        if (Health <= 0 && photonView.IsMine && !isPlayerDead)
         {
-            GetComponent<CharacterController>().enabled = false;
+            XROrigin origin = FindObjectOfType<XROrigin>();
+            origin.GetComponent<CharacterController>().enabled = false;
+            origin.transform.Find("Camera Offset/RightHand").gameObject.SetActive(false);
+            origin.transform.Find("Camera Offset/LeftHand").gameObject.SetActive(false);
             Debug.Log("Player KO");
+            isPlayerDead = true;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void RecibeDamage(float damage)
     {
-        if (other.CompareTag("PistolBullet"))
-        {
-            Health -= PISTOL_BULLET_DAMAGE;
-            healthBarManager.UpdateHealthBars(Health);
-            Debug.Log("Pistol hit");
-            Destroy(other.gameObject);
-        }
-        else if (other.CompareTag("M4Bullet"))
-        {
-            Health -= M4_BULLET_DAMAGE;
-            healthBarManager.UpdateHealthBars(Health);
-            Debug.Log("M4 hit");
-            Destroy(other.gameObject);
-        }
+        healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
+        Debug.Log("(RecibeDamage) Health bar manager is: " + healthBarManager);
+        Health -= damage;
+        healthBarManager.UpdateHealthBars(Health);
+        Debug.Log("Damage hit: " + damage);
     }
 }

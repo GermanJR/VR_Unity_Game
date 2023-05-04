@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5457515105139421630}
   - component: {fileID: 7824435719531344627}
   - component: {fileID: 3086239449061454693}
+  - component: {fileID: -119976604676880631}
   m_Layer: 0
   m_Name: Bullet AlleyM4
   m_TagString: M4Bullet
@@ -155,3 +156,17 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &-119976604676880631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457515105139421631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b89e69579e02be43b01a3a0908d60b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarManager: {fileID: 0}
+  playerHealthController: {fileID: 0}

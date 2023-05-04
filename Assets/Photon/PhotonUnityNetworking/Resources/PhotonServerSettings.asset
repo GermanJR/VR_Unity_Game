@@ -55,6 +55,9 @@ MonoBehaviour:
   - DeactivateZonesOverNetwork
   - UpdateHealthBarsOverNetwork
   - ActivateHealthBarsOverNetwork
+  - FireBulletOverNetwork
+  - BeginFire
+  - StopFire
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -66,19 +66,13 @@ public class AlleyGameStarter : MonoBehaviour
         pistolsSpawner.SpawnPistols();
         m4Spawner.SpawnM4();
 
-        photonView.RPC("DeactivateZonesOverNetwork", RpcTarget.All);
+        p1StartingZone.SetActive(false);
+        p2StartingZone.SetActive(false);
         healthBarManager.ActivateHealthBars();
 
         yield return new WaitForSeconds(1f);
         
         readyText.text = "";
-    }
-
-    [PunRPC]
-    private void DeactivateZonesOverNetwork()
-    {
-        p1StartingZone.SetActive(false);
-        p2StartingZone.SetActive(false);
     }
 
     public void ChangeStatesForPlayer1()
