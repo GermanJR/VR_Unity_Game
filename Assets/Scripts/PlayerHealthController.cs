@@ -6,10 +6,7 @@ using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviourPun
 {
-    private HealthBarManager healthBarManager;
-
-    private const int PISTOL_BULLET_DAMAGE = 8;
-    private const int M4_BULLET_DAMAGE = 5;
+    [SerializeField] private HealthBarManager healthBarManager;
 
     private bool isPlayerDead = false;
 
@@ -24,7 +21,7 @@ public class PlayerHealthController : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
+        //healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
         Debug.Log("Health bar manager is: " + healthBarManager);
     }
 

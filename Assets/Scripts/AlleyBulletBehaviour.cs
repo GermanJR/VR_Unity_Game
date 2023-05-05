@@ -25,24 +25,14 @@ public class AlleyBulletBehaviour : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") && gameObject.tag == "PistolBullet")
-        {
-            playerHealthController.RecibeDamage(PISTOL_BULLET_DAMAGE);
-            Debug.Log("Pistol bullet recibed.");
-            Destroy(gameObject);
-        }
-        else if (other.CompareTag("Player") && gameObject.tag == "M4Bullet")
-        {
-            playerHealthController.RecibeDamage(M4_BULLET_DAMAGE);
-            Debug.Log("M4 bullet recibed.");
-            Destroy(gameObject);
-        }
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
+
+        if (collision.gameObject.name == "XR Origin")
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("Player") && gameObject.tag == "PistolBullet")
         {
             /*
@@ -58,7 +48,7 @@ public class AlleyBulletBehaviour : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player") && gameObject.tag == "M4Bullet")
         {
-            playerHealthController = collision.gameObject.GetComponent<PlayerHealthController>();
+            playerHealthController = collision.transform.parent.parent.gameObject.GetComponent<PlayerHealthController>();
             playerHealthController.RecibeDamage(M4_BULLET_DAMAGE);
             Debug.Log("M4 bullet recibed.");
             Destroy(gameObject);

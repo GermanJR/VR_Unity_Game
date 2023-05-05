@@ -38,7 +38,7 @@ public class FireBulletActivateNetWork : MonoBehaviourPun
         */
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-        photonView.RPC("DeactivateZonesOverNetwork", RpcTarget.Others);
+        photonView.RPC("FireBulletOverNetwork", RpcTarget.Others);
         Destroy(spawnedBullet, 3);
     }
 

@@ -68,6 +68,7 @@ public class AlleyGameStarter : MonoBehaviour
 
         p1StartingZone.SetActive(false);
         p2StartingZone.SetActive(false);
+        healthBarManager.gameObject.SetActive(true);
         healthBarManager.ActivateHealthBars();
 
         yield return new WaitForSeconds(1f);

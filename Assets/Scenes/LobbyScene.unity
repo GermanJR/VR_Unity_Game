@@ -14151,7 +14151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 304, y: -198}
+  m_AnchoredPosition: {x: 304, y: -182}
   m_SizeDelta: {x: 176.81049, y: 105.6478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1147739325
@@ -14544,7 +14544,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -90.14365, w: 0}
+  m_margin: {x: 0, y: 40.188053, z: -90.14365, w: 35.9051}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -18911,7 +18911,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -90.14365, w: 0}
+  m_margin: {x: 0, y: 13.013195, z: -90.14365, w: 31.595844}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -21088,7 +21088,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -90.14365, w: 0}
+  m_margin: {x: 0, y: 38.20043, z: -90.14365, w: 38.04157}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -23833,7 +23833,7 @@ PrefabInstance:
     - target: {fileID: 9153090004850490024, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -342
+      value: -341.99997
       objectReference: {fileID: 0}
     - target: {fileID: 9153090004850490024, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
@@ -23938,7 +23938,7 @@ PrefabInstance:
     - target: {fileID: 9153090005756989539, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -235
+      value: -234.99997
       objectReference: {fileID: 0}
     - target: {fileID: 9153090005756989539, guid: 5ea1bf79c5ac3b2428a7402233e233ca,
         type: 3}
