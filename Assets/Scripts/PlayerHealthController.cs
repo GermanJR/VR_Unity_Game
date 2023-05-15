@@ -2,6 +2,7 @@ using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviourPun
@@ -34,6 +35,7 @@ public class PlayerHealthController : MonoBehaviourPun
         {
             XROrigin origin = FindObjectOfType<XROrigin>();
             origin.GetComponent<CharacterController>().enabled = false;
+            origin.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
             origin.transform.Find("Camera Offset/RightHand").gameObject.SetActive(false);
             origin.transform.Find("Camera Offset/LeftHand").gameObject.SetActive(false);
             Debug.Log("Player KO");

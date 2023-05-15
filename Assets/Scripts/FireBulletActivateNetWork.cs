@@ -30,28 +30,25 @@ public class FireBulletActivateNetWork : MonoBehaviourPun
     public void FireBullet(ActivateEventArgs args)
     {
         shotSound.Play();
+        //photonView.RPC("FireBulletOverNetwork", RpcTarget.All);
 
+        
         GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet Alley", spawnPoint.position, spawnPoint.rotation);
-        /*
-        spawnedBullet.AddComponent<HealthBarManager>();
-        spawnedBullet.AddComponent<PlayerHealthController>();
-        */
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-        photonView.RPC("FireBulletOverNetwork", RpcTarget.Others);
+        /*
+        PhotonView.Destroy(spawnedBullet);
         Destroy(spawnedBullet, 3);
+        */
     }
 
+    /*
     [PunRPC]
     private void FireBulletOverNetwork()
     {
-        GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet Alley", spawnPoint.position, spawnPoint.rotation);
-        /*
-        spawnedBullet.AddComponent<HealthBarManager>();
-        spawnedBullet.AddComponent<PlayerHealthController>();
-        */
+        GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet Alley", new Vector3(0,0,0), new Quaternion(0,0,0,0));
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-        Destroy(spawnedBullet, 3);
     }
+    */
 }

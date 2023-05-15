@@ -26,31 +26,43 @@ public class AlleyBulletBehaviour : MonoBehaviourPun
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        if (collision.gameObject.name == "XR Origin" || (!photonView.IsMine))
+        if (!photonView.IsMine)
         {
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("Gun") || collision.gameObject.CompareTag("AutomaticGun"))
+        {
+            return;
+        }
+
+        if (collision.gameObject.name == "XR Origin")
+        {
+            //Destroy(gameObject);
+            photonView.RPC("DestroyBulletOverNetwork", RpcTarget.All);
             return;
         }
 
         if (collision.gameObject.CompareTag("Player") && gameObject.tag == "PistolBullet")
         {
-            /*
-            playerHealthController = GameObject.Find("AlleyNetworkPlayer (Clone)").GetComponent<PlayerHealthController>();
-            playerHealthController.RecibeDamage(PISTOL_BULLET_DAMAGE);
-            */
-            
             Debug.Log("Pistol bullet recibed.");
             Debug.Log("Collision: " + collision.gameObject.name);
             playerHealthController = collision.transform.parent.parent.gameObject.GetComponent<PlayerHealthController>();
-            playerHealthController.RecibeDamage(PISTOL_BULLET_DAMAGE);
-            Destroy(gameObject);
+            playerHealthController.RecibeDamage(PISTOL_BULLET_DAMAGE);;
         }
         else if (collision.gameObject.CompareTag("Player") && gameObject.tag == "M4Bullet")
         {
             playerHealthController = collision.transform.parent.parent.gameObject.GetComponent<PlayerHealthController>();
             playerHealthController.RecibeDamage(M4_BULLET_DAMAGE);
             Debug.Log("M4 bullet recibed.");
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
+        photonView.RPC("DestroyBulletOverNetwork", RpcTarget.Others);
+    }
+
+    [PunRPC]
+    private void DestroyBulletOverNetwork()
+    {
+        Destroy(gameObject);
     }
 }

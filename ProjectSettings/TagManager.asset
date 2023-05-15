@@ -16,6 +16,7 @@ TagManager:
   - BreakPlatform
   - PistolBullet
   - M4Bullet
+  - Gun
   layers:
   - Default
   - TransparentFX
