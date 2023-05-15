@@ -168,5 +168,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b89e69579e02be43b01a3a0908d60b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarManager: {fileID: 0}
-  playerHealthController: {fileID: 0}

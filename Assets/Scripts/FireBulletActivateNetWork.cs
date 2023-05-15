@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireBulletActivateNetWork : MonoBehaviourPun
 {
-    public GameObject bullet;
+    //public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20;
 
@@ -31,7 +31,7 @@ public class FireBulletActivateNetWork : MonoBehaviourPun
     {
         shotSound.Play();
 
-        GameObject spawnedBullet = Instantiate(bullet);
+        GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet Alley", spawnPoint.position, spawnPoint.rotation);
         /*
         spawnedBullet.AddComponent<HealthBarManager>();
         spawnedBullet.AddComponent<PlayerHealthController>();
@@ -45,7 +45,7 @@ public class FireBulletActivateNetWork : MonoBehaviourPun
     [PunRPC]
     private void FireBulletOverNetwork()
     {
-        GameObject spawnedBullet = Instantiate(bullet);
+        GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet Alley", spawnPoint.position, spawnPoint.rotation);
         /*
         spawnedBullet.AddComponent<HealthBarManager>();
         spawnedBullet.AddComponent<PlayerHealthController>();

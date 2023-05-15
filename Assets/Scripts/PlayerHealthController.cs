@@ -12,6 +12,7 @@ public class PlayerHealthController : MonoBehaviourPun
 
     private float health = 300f;
 
+    //private bool gotHealthManager = false;
     float Health
     {
         get => health;
@@ -21,14 +22,15 @@ public class PlayerHealthController : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
+        
         //healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
-        Debug.Log("Health bar manager is: " + healthBarManager);
+        //Debug.Log("Health bar manager is: " + healthBarManager);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Health <= 0 && photonView.IsMine && !isPlayerDead)
+        if (Health <= 0 && !isPlayerDead)
         {
             XROrigin origin = FindObjectOfType<XROrigin>();
             origin.GetComponent<CharacterController>().enabled = false;
@@ -41,10 +43,16 @@ public class PlayerHealthController : MonoBehaviourPun
 
     public void RecibeDamage(float damage)
     {
-        healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
+        /*
+        if (!gotHealthManager)
+        {
+            healthBarManager = FindAnyObjectByType<HealthBarManager>();
+            gotHealthManager = true;
+        } 
+        */
         Debug.Log("(RecibeDamage) Health bar manager is: " + healthBarManager);
         Health -= damage;
         healthBarManager.UpdateHealthBars(Health);
-        Debug.Log("Damage hit: " + damage);
+        Debug.Log("Damage hit: " + damage + " Current HP: " + Health);
     }
 }

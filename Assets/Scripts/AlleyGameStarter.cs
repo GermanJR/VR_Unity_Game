@@ -18,7 +18,7 @@ public class AlleyGameStarter : MonoBehaviour
 
     [SerializeField] private GameObject textObject;
 
-    [SerializeField] private HealthBarManager healthBarManager;
+    //[SerializeField] private HealthBarManager healthBarManager;
 
     private bool isPlayer1Ready = false;
     private bool isPlayer2Ready = false;
@@ -68,9 +68,10 @@ public class AlleyGameStarter : MonoBehaviour
 
         p1StartingZone.SetActive(false);
         p2StartingZone.SetActive(false);
+        /*
         healthBarManager.gameObject.SetActive(true);
         healthBarManager.ActivateHealthBars();
-
+        */
         yield return new WaitForSeconds(1f);
         
         readyText.text = "";

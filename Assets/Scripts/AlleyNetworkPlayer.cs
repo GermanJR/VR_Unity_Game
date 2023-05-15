@@ -10,6 +10,7 @@ public class AlleyNetworkPlayer : MonoBehaviourPun
     public Transform rightHand;
     public Transform leftHand;
     public Transform body;
+    public Transform networkHealthBar;
 
     public Animator rightHandAnimator;
     public Animator leftHandAnimator;
@@ -18,6 +19,7 @@ public class AlleyNetworkPlayer : MonoBehaviourPun
     private Transform rightHandOrigin;
     private Transform leftHandOrigin;
     private Transform bodyOrigin;
+    private Transform networkHealthBarOrigin;
 
 
     //private PhotonView photonView;
@@ -31,6 +33,7 @@ public class AlleyNetworkPlayer : MonoBehaviourPun
         rightHandOrigin = origin.transform.Find("Camera Offset/RightHand");
         leftHandOrigin = origin.transform.Find("Camera Offset/LeftHand");
         bodyOrigin = origin.transform.Find("Camera Offset/Body");
+        networkHealthBarOrigin = origin.transform.Find("Camera Offset/Main Camera/HealthBar");
     }
 
     // Update is called once per frame
@@ -42,11 +45,13 @@ public class AlleyNetworkPlayer : MonoBehaviourPun
             rightHand.gameObject.SetActive(false);
             leftHand.gameObject.SetActive(false);
             body.gameObject.SetActive(false);
+            networkHealthBar.gameObject.SetActive(false);
 
             MapPosition(head, headOrigin);
             MapPosition(rightHand, rightHandOrigin);
             MapPosition(leftHand, leftHandOrigin);
             MapPosition(body, bodyOrigin);
+            MapPosition(networkHealthBar, networkHealthBarOrigin);
         }
     }
 

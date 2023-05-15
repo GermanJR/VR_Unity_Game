@@ -1,22 +1,21 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AlleyBulletBehaviour : MonoBehaviour
+public class AlleyBulletBehaviour : MonoBehaviourPun
 {
 
     private const int PISTOL_BULLET_DAMAGE = 8;
     private const int M4_BULLET_DAMAGE = 5;
 
-    [SerializeField] private HealthBarManager healthBarManager;
     private PlayerHealthController playerHealthController;
-
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Assert(photonView != null);
     }
 
     // Update is called once per frame
@@ -28,7 +27,7 @@ public class AlleyBulletBehaviour : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.name == "XR Origin")
+        if (collision.gameObject.name == "XR Origin" || (!photonView.IsMine))
         {
             return;
         }
