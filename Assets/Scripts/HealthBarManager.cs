@@ -117,6 +117,6 @@ public class HealthBarManager : MonoBehaviourPun
     private void InitializeBarsOverNetwork()
     {
         networkPlayerBar.Initialize(MAX_PLAYER_HEALTH);
-        canvasPlayerBar.Initialize(MAX_PLAYER_HEALTH);
+        //canvasPlayerBar.Initialize(MAX_PLAYER_HEALTH);
     }
 }

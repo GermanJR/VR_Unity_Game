@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
+using Photon.Realtime;
+using ExitGames.Client.Photon;
 
-public class PlayerHealthController : MonoBehaviourPun
+public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 {
     [SerializeField] private HealthBarManager healthBarManager;
 
@@ -56,5 +58,29 @@ public class PlayerHealthController : MonoBehaviourPun
         Health -= damage;
         healthBarManager.UpdateHealthBars(Health);
         Debug.Log("Damage hit: " + damage + " Current HP: " + Health);
+    }
+
+    public void OnEvent(EventData photonEvent)
+    {
+        switch (photonEvent.Code)
+        {
+            case 0:
+                object[] data = (object[])photonEvent.CustomData;
+                var damage = data[0];
+                RecibeDamage(float.Parse(damage.ToString()));
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void OnEnable()
+    {
+        PhotonNetwork.AddCallbackTarget(this);
+    }
+
+    private void OnDisable()
+    {
+        PhotonNetwork.RemoveCallbackTarget(this);
     }
 }

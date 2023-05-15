@@ -1,10 +1,12 @@
 using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AlleyBulletBehaviour : MonoBehaviourPun
 {
+    public const byte DealDamageCode = 0;
 
     private const int PISTOL_BULLET_DAMAGE = 8;
     private const int M4_BULLET_DAMAGE = 5;
@@ -48,13 +50,21 @@ public class AlleyBulletBehaviour : MonoBehaviourPun
             Debug.Log("Pistol bullet recibed.");
             Debug.Log("Collision: " + collision.gameObject.name);
             playerHealthController = collision.transform.parent.parent.gameObject.GetComponent<PlayerHealthController>();
-            playerHealthController.RecibeDamage(PISTOL_BULLET_DAMAGE);;
+            //playerHealthController.RecibeDamage(PISTOL_BULLET_DAMAGE);
+
+            object[] content = new object[] { PISTOL_BULLET_DAMAGE};
+            RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+            PhotonNetwork.RaiseEvent(DealDamageCode, content, raiseEventOptions, ExitGames.Client.Photon.SendOptions.SendReliable);
         }
         else if (collision.gameObject.CompareTag("Player") && gameObject.tag == "M4Bullet")
         {
             playerHealthController = collision.transform.parent.parent.gameObject.GetComponent<PlayerHealthController>();
-            playerHealthController.RecibeDamage(M4_BULLET_DAMAGE);
+            //playerHealthController.RecibeDamage(M4_BULLET_DAMAGE);
             Debug.Log("M4 bullet recibed.");
+
+            object[] content = new object[] { M4_BULLET_DAMAGE };
+            RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.Others };
+            PhotonNetwork.RaiseEvent(DealDamageCode, content, raiseEventOptions, ExitGames.Client.Photon.SendOptions.SendReliable);
         }
         Destroy(gameObject);
         photonView.RPC("DestroyBulletOverNetwork", RpcTarget.Others);
