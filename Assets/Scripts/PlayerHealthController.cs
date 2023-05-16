@@ -47,13 +47,15 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     public void RecibeDamage(float damage)
     {
-        /*
-        if (!gotHealthManager)
+        Debug.Log(transform.gameObject.name);
+        Debug.Assert(healthBarManager != null);
+        
+        if (healthBarManager == null && photonView.IsMine)
         {
-            healthBarManager = FindAnyObjectByType<HealthBarManager>();
-            gotHealthManager = true;
-        } 
-        */
+            Debug.LogWarning("HealthBarManger was null.");
+            healthBarManager = GameObject.Find("AlleyNetworkPlayer(Clone)/HealthBarManager").GetComponent<HealthBarManager>();
+        }
+        
         Debug.Log("(RecibeDamage) Health bar manager is: " + healthBarManager);
         Health -= damage;
         healthBarManager.UpdateHealthBars(Health);
@@ -62,11 +64,18 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     public void OnEvent(EventData photonEvent)
     {
+        if (photonEvent.Code == 0)
+        {
+            Debug.Log("Event recieved with code: " + photonEvent.Code);
+
+        }
+
         switch (photonEvent.Code)
         {
             case 0:
                 object[] data = (object[])photonEvent.CustomData;
                 var damage = data[0];
+                Debug.Log("Correct event recieved, damage sent -> " + float.Parse(damage.ToString()));
                 RecibeDamage(float.Parse(damage.ToString()));
                 break;
             default:
