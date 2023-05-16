@@ -87,6 +87,10 @@ public class HealthBarManager : MonoBehaviourPun
 
     public void UpdateHealthBars(float newValue)
     {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
 
         if (!healthBarsInitialized)
         {
@@ -103,7 +107,7 @@ public class HealthBarManager : MonoBehaviourPun
     private void UpdateHealthBarsOverNetwork(float newValue)
     {
         networkPlayerBar.UpdateHealthBar(newValue);
-        canvasPlayerBar.UpdateHealthBar(newValue);
+        //canvasPlayerBar.UpdateHealthBar(newValue);
     }   
     
     public void InitializeBars()

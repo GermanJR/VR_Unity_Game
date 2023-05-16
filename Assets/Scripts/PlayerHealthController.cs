@@ -52,7 +52,7 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
         
         if (healthBarManager == null && photonView.IsMine)
         {
-            Debug.LogWarning("HealthBarManger was null.");
+            Debug.LogWarning("HealthBarManager was null.");
             healthBarManager = GameObject.Find("AlleyNetworkPlayer(Clone)/HealthBarManager").GetComponent<HealthBarManager>();
         }
         
@@ -73,6 +73,10 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
         switch (photonEvent.Code)
         {
             case 0:
+                if (!photonView.IsMine)
+                {
+                    return;
+                }
                 object[] data = (object[])photonEvent.CustomData;
                 var damage = data[0];
                 Debug.Log("Correct event recieved, damage sent -> " + float.Parse(damage.ToString()));
