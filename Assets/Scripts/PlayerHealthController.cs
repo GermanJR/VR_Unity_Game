@@ -105,17 +105,21 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
         if (Health <= 150 && !gotYellow)
         {
             remainingHealthText.color = new Color(207,212,0);
+            Debug.Log("Changed to yellow");
             gotYellow = true;
         }
+
         if (Health <= 100 && !gotOrange)
         {
             remainingHealthText.color = new Color(219, 132, 0);
+            Debug.Log("Changed to orange");
             gotOrange = true;
         }
         
         if (Health <= 50 && !gotRed)
         {
             remainingHealthText.color = new Color(219,30,30);
+            Debug.Log("Changed to red");
             gotRed = true;
         }
     }

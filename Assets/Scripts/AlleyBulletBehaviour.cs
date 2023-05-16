@@ -28,6 +28,7 @@ public class AlleyBulletBehaviour : MonoBehaviourPun
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Name: " + gameObject.name + " | Tag: " + gameObject.tag + " | Collision with: " + collision.gameObject.name);
         if (!photonView.IsMine)
         {
             return;

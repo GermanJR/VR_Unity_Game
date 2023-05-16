@@ -18,12 +18,16 @@ public class AutomaticFireBulletNetWork : MonoBehaviourPun
     private XRGrabInteractable interactable;
 
     private XRBaseController controller;
+
+    private AudioSource shotSound;
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<XRGrabInteractable>();
 
         controller = GetComponent<XRBaseController>();
+
+        shotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,16 +55,27 @@ public class AutomaticFireBulletNetWork : MonoBehaviourPun
     {
         while (true)
         {
-            GameObject spawnedBullet = Instantiate(bullet);
+            shotSound.Play();
             /*
             spawnedBullet.AddComponent<HealthBarManager>();
             spawnedBullet.AddComponent<PlayerHealthController>();
             */
+            GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet AlleyM4", spawnPoint.position, spawnPoint.rotation);
             spawnedBullet.transform.position = spawnPoint.position;
             spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-            Destroy(spawnedBullet, 3);
+            photonView.RPC("ShotOverNetwork", RpcTarget.Others);
+
+            //Destroy(spawnedBullet, 3);
 
             yield return new WaitForSeconds(1f / firerate);
         }
+    }
+
+    [PunRPC]
+    private void ShotOverNetwork()
+    {
+        GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet AlleyM4", spawnPoint.position, spawnPoint.rotation);
+        spawnedBullet.transform.position = spawnPoint.position;
+        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
     }
 }
