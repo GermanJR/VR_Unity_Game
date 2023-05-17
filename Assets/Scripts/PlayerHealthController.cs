@@ -34,6 +34,10 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
     // Start is called before the first frame update
     void Start()
     {
+        if (!photonView.IsMine)
+        {
+            remainingHealthText.gameObject.SetActive(false);
+        }
         remainingHealthText.text = "300/300";
 
         //healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
@@ -102,11 +106,6 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     private void UpdateColorAccordingHealth(bool dead)
     {
-        if (!photonView.IsMine)
-        {
-            return;
-        }
-
         if (dead)
         {
             remainingHealthText.color = new Color(0, 0, 0);
