@@ -12,16 +12,22 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 {
     [SerializeField] private HealthBarManager healthBarManager;
     //[SerializeField] private TMP_Text remainingHealthText;
+    [SerializeField] private TMP_Text endMatchTextObject;
+    [SerializeField] private TMP_Text HPText;
 
     [SerializeField] private GameObject deadFlag;
     [SerializeField] private GameObject HPTextObject;
 
-    private bool isPlayerDead = false;
+    [SerializeField] private GameObject winTextObject;
+    [SerializeField] private GameObject loseTextObject;
 
+    private bool isPlayerDead = false;
+    private bool didPlayerWon = false;
+    /*
     private bool gotYellow = false;
     private bool gotOrange = false;
     private bool gotRed = false;
-
+    */
     private float health = 300f;
 
     //private bool gotHealthManager = false;
@@ -59,9 +65,31 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
             photonView.RPC("ActivateDeadFlagOverNetwork", RpcTarget.Others);
             healthBarManager.UnableDeadPlayerBar();
 
+            MakeRivalWin();
+            StartCoroutine(LoseEndMatchCoroutine());
+
             Debug.Log("Player KO");
             isPlayerDead = true;
         }
+        else if (didPlayerWon)
+        {
+            healthBarManager.UnableWinnerBar();
+            StartCoroutine(WinEndMatchCoroutine());
+        }
+    }
+
+    private void MakeRivalWin()
+    {
+        if (photonView.IsMine)
+        {
+            photonView.RPC("MakeRivalWinOverNetwork", RpcTarget.Others);
+        }
+    }
+
+    [PunRPC]
+    private void MakeRivalWinOverNetwork()
+    {
+        didPlayerWon = true;
     }
 
     [PunRPC]
@@ -165,5 +193,57 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
     private void OnDisable()
     {
         PhotonNetwork.RemoveCallbackTarget(this);
+    }
+
+    IEnumerator LoseEndMatchCoroutine()
+    {
+        HPText.text = "";
+        HPTextObject.SetActive(false);
+        loseTextObject.SetActive(true);
+        endMatchTextObject.gameObject.SetActive(true);
+        WaitForSeconds waitForSeconds = new WaitForSeconds(1f);
+
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 4 SECONDS.";        
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 3 SECONDS.";        
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 2 SECONDS.";        
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 1 SECOND."; 
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 0 SECONDS.";
+        LevelLoader levelLoader = FindAnyObjectByType<LevelLoader>();
+        levelLoader.LeaveRoomAndGoToLobby();
+    }    
+    
+    IEnumerator WinEndMatchCoroutine()
+    {
+        HPText.text = "";
+        HPTextObject.SetActive(false);
+        winTextObject.SetActive(true);
+        endMatchTextObject.gameObject.SetActive(true);
+        WaitForSeconds waitForSeconds = new WaitForSeconds(1f);
+
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 4 SECONDS.";        
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 3 SECONDS.";        
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 2 SECONDS.";        
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 1 SECOND."; 
+        
+        yield return waitForSeconds;
+        endMatchTextObject.text = "END OF THE MATCH\nRETURNING TO LOBBY\nIN 0 SECONDS.";
+        LevelLoader levelLoader = FindAnyObjectByType<LevelLoader>();
+        levelLoader.LeaveRoomAndGoToLobby();
     }
 }

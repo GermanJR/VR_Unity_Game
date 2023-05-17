@@ -11,9 +11,6 @@ public class HealthBarManager : MonoBehaviourPun
 
     [SerializeField] private MicroBar canvasPlayerBar;
     [SerializeField] private MicroBar networkPlayerBar;
-
-    private GameObject canvasHealthText;
-
     private bool healthBarsInitialized = false;
 
 
@@ -142,5 +139,11 @@ public class HealthBarManager : MonoBehaviourPun
     private void UnableDeadPlayerBarOverNetwork()
     {
         networkPlayerBar.gameObject.SetActive(false);
+    }
+
+
+    public void UnableWinnerBar()
+    {
+        canvasPlayerBar.gameObject.SetActive(false);
     }
 }
