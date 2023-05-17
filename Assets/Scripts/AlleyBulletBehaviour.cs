@@ -48,8 +48,8 @@ public class AlleyBulletBehaviour : MonoBehaviourPun
 
         if (collision.gameObject.CompareTag("Player") && gameObject.tag == "PistolBullet")
         {
-            Debug.Log("Pistol bullet recibed.");
-            Debug.Log("Collision: " + collision.gameObject.name);
+            //Debug.Log("Pistol bullet recibed.");
+            //Debug.Log("Collision: " + collision.gameObject.name);
             playerHealthController = collision.transform.parent.parent.gameObject.GetComponent<PlayerHealthController>();
             //playerHealthController.RecibeDamage(PISTOL_BULLET_DAMAGE);
 

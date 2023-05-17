@@ -33,7 +33,9 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
+        remainingHealthText.text = "300/300";
+
         //healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
         //Debug.Log("Health bar manager is: " + healthBarManager);
     }
@@ -50,6 +52,7 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
             origin.transform.Find("Camera Offset/LeftHand").gameObject.SetActive(false);
             deadFlag.SetActive(true);
             photonView.RPC("ActivateDeadFlagOverNetwork", RpcTarget.Others);
+            healthBarManager.UnableDeadPlayerBar();
 
             Debug.Log("Player KO");
             isPlayerDead = true;
@@ -79,29 +82,35 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
             healthBarManager = GameObject.Find("AlleyNetworkPlayer(Clone)/HealthBarManager").GetComponent<HealthBarManager>();
         }
         
-        Debug.Log("(RecibeDamage) Health bar manager is: " + healthBarManager);
+        //Debug.Log("(RecibeDamage) Health bar manager is: " + healthBarManager);
         Health -= damage;
 
         if (!isPlayerDead)
         {
             remainingHealthText.text = Health + "/300";
+            UpdateColorAccordingHealth(false);
         }
         else
         {
             remainingHealthText.text = "0/300";
+            UpdateColorAccordingHealth(true);
         }
-
-        UpdateColorAccordingHealth();
 
         healthBarManager.UpdateHealthBars(Health);
         Debug.Log("Damage hit: " + damage + " Current HP: " + Health);
     }
 
-    private void UpdateColorAccordingHealth()
+    private void UpdateColorAccordingHealth(bool dead)
     {
-
         if (!photonView.IsMine)
         {
+            return;
+        }
+
+        if (dead)
+        {
+            remainingHealthText.color = new Color(0, 0, 0);
+            Debug.Log("Changed to black");
             return;
         }
 
@@ -114,14 +123,14 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
         if (Health <= 100 && !gotOrange)
         {
-            remainingHealthText.color = new Color(219, 132, 0);
+            remainingHealthText.color = new Color(255, 144, 0);
             Debug.Log("Changed to orange");
             gotOrange = true;
         }
         
         if (Health <= 50 && !gotRed)
         {
-            remainingHealthText.color = new Color(219,30,30);
+            remainingHealthText.color = new Color(219,0,0);
             Debug.Log("Changed to red");
             gotRed = true;
         }
@@ -129,11 +138,6 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     public void OnEvent(EventData photonEvent)
     {
-        if (photonEvent.Code == 0)
-        {
-            Debug.Log("Event recieved with code: " + photonEvent.Code);
-        }
-
         switch (photonEvent.Code)
         {
             case 0:
@@ -143,7 +147,7 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
                 }
                 object[] data = (object[])photonEvent.CustomData;
                 var damage = data[0];
-                Debug.Log("Correct event recieved, damage sent -> " + float.Parse(damage.ToString()));
+                //Debug.Log("Correct event recieved, damage sent -> " + float.Parse(damage.ToString()));
                 RecibeDamage(float.Parse(damage.ToString()));
                 break;
             default:

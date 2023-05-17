@@ -125,4 +125,19 @@ public class HealthBarManager : MonoBehaviourPun
         networkPlayerBar.Initialize(MAX_PLAYER_HEALTH);
         //canvasPlayerBar.Initialize(MAX_PLAYER_HEALTH);
     }
+
+    public void UnableDeadPlayerBar()
+    {
+        if (photonView.IsMine)
+        {
+            networkPlayerBar.gameObject.SetActive(false);
+            photonView.RPC("UnableDeadPlayerBarOverNetwork", RpcTarget.Others);
+        }
+    }
+
+    [PunRPC]
+    private void UnableDeadPlayerBarOverNetwork()
+    {
+        networkPlayerBar.gameObject.SetActive(false);
+    }
 }

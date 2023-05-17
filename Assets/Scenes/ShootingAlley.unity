@@ -12094,7 +12094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1071533339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12135,7 +12135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HEALTH:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: aa4cdb995ff426b468f18e2a60dfadaf, type: 2}
   m_sharedMaterial: {fileID: 8211226735857506296, guid: aa4cdb995ff426b468f18e2a60dfadaf,
