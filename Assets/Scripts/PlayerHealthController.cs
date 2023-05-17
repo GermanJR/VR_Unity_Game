@@ -11,7 +11,7 @@ using TMPro;
 public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 {
     [SerializeField] private HealthBarManager healthBarManager;
-    [SerializeField] private TMP_Text remainingHealthText;
+    //[SerializeField] private TMP_Text remainingHealthText;
 
     [SerializeField] private GameObject deadFlag;
     [SerializeField] private GameObject HPTextObject;
@@ -34,12 +34,13 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
     // Start is called before the first frame update
     void Start()
     {
+        /*
         if (!photonView.IsMine)
         {
             remainingHealthText.gameObject.SetActive(false);
         }
         remainingHealthText.text = "300/300";
-
+        */
         //healthBarManager = GameObject.Find("HealthBarManager").GetComponent<HealthBarManager>();
         //Debug.Log("Health bar manager is: " + healthBarManager);
     }
@@ -76,7 +77,7 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
             HPTextObject.SetActive(true);
         }
 
-        remainingHealthText.text = "";
+        //remainingHealthText.text = "";
         //Debug.Log(transform.gameObject.name);
         Debug.Assert(healthBarManager != null);
         
@@ -88,7 +89,7 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
         
         //Debug.Log("(RecibeDamage) Health bar manager is: " + healthBarManager);
         Health -= damage;
-
+        /*
         if (!isPlayerDead)
         {
             remainingHealthText.text = Health + "/300";
@@ -99,11 +100,12 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
             remainingHealthText.text = "0/300";
             UpdateColorAccordingHealth(true);
         }
-
+        */
         healthBarManager.UpdateHealthBars(Health);
         Debug.Log("Damage hit: " + damage + " Current HP: " + Health);
     }
 
+    /*
     private void UpdateColorAccordingHealth(bool dead)
     {
         if (dead)
@@ -134,6 +136,7 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
             gotRed = true;
         }
     }
+    */
 
     public void OnEvent(EventData photonEvent)
     {

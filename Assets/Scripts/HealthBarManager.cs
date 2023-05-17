@@ -9,7 +9,7 @@ public class HealthBarManager : MonoBehaviourPun
 {
     private const float MAX_PLAYER_HEALTH = 300f;
 
-    //[SerializeField] private MicroBar canvasPlayerBar;
+    [SerializeField] private MicroBar canvasPlayerBar;
     [SerializeField] private MicroBar networkPlayerBar;
 
     private GameObject canvasHealthText;
@@ -20,7 +20,10 @@ public class HealthBarManager : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-
+        if (!photonView.IsMine)
+        {
+            canvasPlayerBar.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -100,7 +103,7 @@ public class HealthBarManager : MonoBehaviourPun
             healthBarsInitialized = true;
         }
 
-        //canvasPlayerBar.UpdateHealthBar(newValue);
+        canvasPlayerBar.UpdateHealthBar(newValue);
         networkPlayerBar.UpdateHealthBar(newValue);
         photonView.RPC("UpdateHealthBarsOverNetwork", RpcTarget.Others, newValue);
     }
@@ -114,7 +117,7 @@ public class HealthBarManager : MonoBehaviourPun
     
     public void InitializeBars()
     {
-        //canvasPlayerBar.Initialize(MAX_PLAYER_HEALTH);
+        canvasPlayerBar.Initialize(MAX_PLAYER_HEALTH);
         networkPlayerBar.Initialize(MAX_PLAYER_HEALTH);
         photonView.RPC("InitializeBarsOverNetwork", RpcTarget.Others);
     }
