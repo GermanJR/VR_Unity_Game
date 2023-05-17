@@ -18,6 +18,9 @@ public class AutomaticFireBullet : MonoBehaviour
     private XRGrabInteractable interactable;
 
     private XRBaseController controller;
+
+    private AudioSource shotSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,8 @@ public class AutomaticFireBullet : MonoBehaviour
         //interactable.activated.AddListener(Fire);
 
         controller = GetComponent<XRBaseController>();
+
+        shotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -67,6 +72,7 @@ public class AutomaticFireBullet : MonoBehaviour
     {
         while (true)
         {
+            shotSound.Play();
             GameObject spawnedBullet = Instantiate(bullet);
             spawnedBullet.transform.position = spawnPoint.position;
             spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;

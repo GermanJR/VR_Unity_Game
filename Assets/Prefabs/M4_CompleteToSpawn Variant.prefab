@@ -224,17 +224,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 542a4d5c94fcb5a40819cf2535dcd1ea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.36
+      value: -1.5675873
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 542a4d5c94fcb5a40819cf2535dcd1ea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.09
+      value: 1.389
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 542a4d5c94fcb5a40819cf2535dcd1ea,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.46
+      value: -1.8821633
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 542a4d5c94fcb5a40819cf2535dcd1ea,
         type: 3}
@@ -492,35 +492,6 @@ MonoBehaviour:
   hapticSelectExited:
     intensity: 0
     duration: 0
---- !u!114 &507258612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5114940029228662898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b74ddde8fa706694d9aa606c310dabe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5457515105139421631, guid: 7df2a834f6e20094fbcad4d5621795f5, type: 3}
-  spawnPoint: {fileID: 781121985}
-  fireSpeed: 20
-  firerate: 8
-  trigger:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Trigger
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: ba3e1f6e-6477-4a50-a050-7c5feed4f42b
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
 --- !u!114 &507258613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,7 +583,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507258612}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AutomaticFireBullet, Assembly-CSharp
         m_MethodName: StopFire
         m_Mode: 1
@@ -627,7 +598,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507258612}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AutomaticFireBullet, Assembly-CSharp
         m_MethodName: BeginFire
         m_Mode: 1
@@ -642,7 +613,7 @@ MonoBehaviour:
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507258612}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AutomaticFireBullet, Assembly-CSharp
         m_MethodName: StopFire
         m_Mode: 1
@@ -727,10 +698,39 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  secondHandGrabPoint: {fileID: 0}
+  secondHandGrabPoint: {fileID: 1843157680}
   twoHandRotationType: 0
   rightHand: {fileID: 0}
   leftHand: {fileID: 0}
+--- !u!114 &903566128800689817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114940029228662898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74ddde8fa706694d9aa606c310dabe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5457515105139421631, guid: 40cb7f515e278ce45abe067aaf7f2bb0, type: 3}
+  spawnPoint: {fileID: 781121985}
+  fireSpeed: 20
+  firerate: 8
+  trigger:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: cf06d532-02c5-49be-821f-4e8fd1b3dc8f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!4 &5598038623273982664 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 542a4d5c94fcb5a40819cf2535dcd1ea,

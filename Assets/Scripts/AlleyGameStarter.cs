@@ -64,7 +64,7 @@ public class AlleyGameStarter : MonoBehaviour
         readyText.text = "FIGHT!";
 
         pistolsSpawner.SpawnPistols();
-        m4Spawner.SpawnM4();
+        //m4Spawner.SpawnM4();
 
         p1StartingZone.SetActive(false);
         p2StartingZone.SetActive(false);

@@ -20,6 +20,7 @@ public class AutomaticFireBulletNetWork : MonoBehaviourPun
     private XRBaseController controller;
 
     private AudioSource shotSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,19 +37,18 @@ public class AutomaticFireBulletNetWork : MonoBehaviourPun
 
     }
 
-    [PunRPC]
     public void BeginFire()
     {
+        Debug.Log("Fire");
         if (coroutine != null) StopCoroutine(coroutine);
 
         coroutine = StartCoroutine(FireRoutine());
     }
 
-    [PunRPC]
     public void StopFire()
     {
         if (coroutine != null) StopCoroutine(coroutine);
-
+        Debug.Log("Fire stopped");
     }
 
     public IEnumerator FireRoutine()
@@ -63,6 +63,7 @@ public class AutomaticFireBulletNetWork : MonoBehaviourPun
             GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet AlleyM4", spawnPoint.position, spawnPoint.rotation);
             spawnedBullet.transform.position = spawnPoint.position;
             spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+            
             photonView.RPC("ShotOverNetwork", RpcTarget.Others);
 
             //Destroy(spawnedBullet, 3);
@@ -77,5 +78,6 @@ public class AutomaticFireBulletNetWork : MonoBehaviourPun
         GameObject spawnedBullet = PhotonNetwork.Instantiate("Bullet AlleyM4", spawnPoint.position, spawnPoint.rotation);
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+        Debug.Log("Network shot called");
     }
 }

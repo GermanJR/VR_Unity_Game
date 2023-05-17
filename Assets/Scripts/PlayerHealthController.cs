@@ -22,8 +22,6 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
     private bool gotOrange = false;
     private bool gotRed = false;
 
-    private bool HPTextActivated = false;
-
     private float health = 300f;
 
     //private bool gotHealthManager = false;
@@ -66,14 +64,13 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     public void RecibeDamage(float damage)
     {
-        if (!HPTextActivated)
+        if (!HPTextObject.activeSelf)
         {
             HPTextObject.SetActive(true);
-            HPTextActivated = true;
         }
 
         remainingHealthText.text = "";
-        Debug.Log(transform.gameObject.name);
+        //Debug.Log(transform.gameObject.name);
         Debug.Assert(healthBarManager != null);
         
         if (healthBarManager == null && photonView.IsMine)
@@ -102,6 +99,12 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     private void UpdateColorAccordingHealth()
     {
+
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+
         if (Health <= 150 && !gotYellow)
         {
             remainingHealthText.color = new Color(207,212,0);
