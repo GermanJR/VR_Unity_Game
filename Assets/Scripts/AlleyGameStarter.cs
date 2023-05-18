@@ -18,6 +18,8 @@ public class AlleyGameStarter : MonoBehaviour
 
     [SerializeField] private GameObject textObject;
 
+    [SerializeField] private AlleyMusicManager musicManager;
+
     //[SerializeField] private HealthBarManager healthBarManager;
 
     private bool isPlayer1Ready = false;
@@ -53,6 +55,7 @@ public class AlleyGameStarter : MonoBehaviour
 
     IEnumerator StartMatchCoroutine()
     {
+        musicManager.ChangeToCombatMusic();
         readyText.text = "READY?";
         p1BarrierSystem.SetActive(true);
         p2BarrierSystem.SetActive(true);

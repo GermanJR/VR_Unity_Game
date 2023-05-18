@@ -197,6 +197,9 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     IEnumerator LoseEndMatchCoroutine()
     {
+        AlleyMusicManager musicManager = FindAnyObjectByType<AlleyMusicManager>();
+        musicManager.FadeCombatMusic();
+        
         HPText.text = "";
         HPTextObject.SetActive(false);
         loseTextObject.SetActive(true);
@@ -223,6 +226,9 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
     
     IEnumerator WinEndMatchCoroutine()
     {
+        AlleyMusicManager musicManager = FindAnyObjectByType<AlleyMusicManager>();
+        musicManager.FadeCombatMusic();
+
         HPText.text = "";
         HPTextObject.SetActive(false);
         winTextObject.SetActive(true);
