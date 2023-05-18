@@ -9,6 +9,7 @@ public class AlleyGameStarter : MonoBehaviour
 {
     [SerializeField] private PistolsSpawner pistolsSpawner;
     [SerializeField] private M4Spawner m4Spawner;
+    [SerializeField] private HealingSpawner healingSpawner;
     
     [SerializeField] private GameObject p1BarrierSystem;
     [SerializeField] private GameObject p2BarrierSystem;
@@ -78,6 +79,7 @@ public class AlleyGameStarter : MonoBehaviour
         yield return new WaitForSeconds(1f);
         
         readyText.text = "";
+        healingSpawner.StartSpawning();
     }
 
     public void ChangeStatesForPlayer1()

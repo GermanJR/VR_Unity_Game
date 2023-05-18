@@ -40,6 +40,7 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
     // Start is called before the first frame update
     void Start()
     {
+       // Debug.Log("HealthController object name: " + gameObject.name);
         /*
         if (!photonView.IsMine)
         {
@@ -180,9 +181,36 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
                 //Debug.Log("Correct event recieved, damage sent -> " + float.Parse(damage.ToString()));
                 RecibeDamage(float.Parse(damage.ToString()));
                 break;
+                
+            case 1:
+                if (!photonView.IsMine)
+                {
+                    return;
+                }
+                Debug.Log("Got healing");
+                object[] healData = (object[])photonEvent.CustomData;
+                var heal = healData[1];
+                RecibeHealing(float.Parse(heal.ToString()));
+                break;
+                
             default:
                 break;
         }
+    }
+
+    private void RecibeHealing(float healing)
+    {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+        Health += healing;
+        if (Health > 300)
+        {
+            Health = 300;
+        }
+        healthBarManager.UpdateHealthBars(Health);
+        Debug.Log("Healing, new HP: " + Health);
     }
 
     private void OnEnable()
@@ -197,6 +225,9 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
 
     IEnumerator LoseEndMatchCoroutine()
     {
+        HealingSpawner healingSpawner = FindAnyObjectByType<HealingSpawner>();
+        healingSpawner.StopSpawning();
+
         AlleyMusicManager musicManager = FindAnyObjectByType<AlleyMusicManager>();
         musicManager.FadeCombatMusic();
         
@@ -226,6 +257,9 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
     
     IEnumerator WinEndMatchCoroutine()
     {
+        HealingSpawner healingSpawner = FindAnyObjectByType<HealingSpawner>();
+        healingSpawner.StopSpawning();
+
         AlleyMusicManager musicManager = FindAnyObjectByType<AlleyMusicManager>();
         musicManager.FadeCombatMusic();
 
@@ -252,4 +286,24 @@ public class PlayerHealthController : MonoBehaviourPun, IOnEventCallback
         LevelLoader levelLoader = FindAnyObjectByType<LevelLoader>();
         levelLoader.LeaveRoomAndGoToLobby();
     }
+
+    /*
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("HealingOrb"))
+        {
+            Debug.Log("GameObject Name: " + gameObject.name + " | GameObject tag: " + gameObject.tag + "Collision Name: " + other.gameObject.name + " | Collision tag: " + other.gameObject.tag);
+            RecibeHealing(50f);
+            GameObject orb = other.gameObject;
+            Destroy(orb);
+            photonView.RPC("DestroyOrbOverNetwork", RpcTarget.Others, orb);
+        }
+    }
+
+    [PunRPC]
+    private void DestroyOrbOverNetwork(GameObject orb)
+    {
+        Destroy(orb);
+    }
+    */
 }
