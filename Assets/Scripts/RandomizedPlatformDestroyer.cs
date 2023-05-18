@@ -41,16 +41,6 @@ public class RandomizedPlatformDestroyer : MonoBehaviour
             platforms[newIndexSecondPlatform].gameObject.tag = BREAK_TAG;
             platforms[newIndexSecondPlatform].gameObject.GetComponent<Collider>().isTrigger = true;
         }
-        /*
-        Debug.Log("Succesfully changed tag to: ");
-        for (int i = 0; i < platforms.Length; i++)
-        {
-            if (platforms[i].gameObject.CompareTag(BREAK_TAG))
-            {
-                Debug.Log(platforms[i].name + " - With tag = " + platforms[i].gameObject.tag);
-            }
-        }
-        */
     }
 
     // Update is called once per frame

@@ -19,6 +19,7 @@ public class NetworkPlayer : MonoBehaviourPun
     private Transform rightHandOrigin;
     private Transform leftHandOrigin;
 
+
     //private PhotonView photonView;
 
     // Start is called before the first frame update
