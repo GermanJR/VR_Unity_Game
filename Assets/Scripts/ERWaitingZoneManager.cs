@@ -9,6 +9,10 @@ public class ERWaitingZoneManager : MonoBehaviourPun
 {
 
     [SerializeField] private TMP_Text numberOfPlayersText;
+    
+    [SerializeField] private GameObject startNowTextObject;
+    [SerializeField] private GameObject allJoinedTextObject;
+
 
     private bool isRoomClosed = false;
 
@@ -24,11 +28,15 @@ public class ERWaitingZoneManager : MonoBehaviourPun
         numberOfPlayersText.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
         if (PhotonNetwork.CurrentRoom.PlayerCount == 4)
         {
+            startNowTextObject.SetActive(false);
+            allJoinedTextObject.SetActive(true);
             CloseRoom();
             isRoomClosed = true;
         }
         else if (isRoomClosed && !(PhotonNetwork.CurrentRoom.PlayerCount == 4))
         {
+            startNowTextObject.SetActive(true);
+            allJoinedTextObject.SetActive(false);
             ReopenRoom();
             isRoomClosed = false;
         }
