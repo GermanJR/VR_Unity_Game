@@ -12,6 +12,8 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     
     [SerializeField] private GameObject startNowTextObject;
     [SerializeField] private GameObject allJoinedTextObject;
+    [SerializeField] private GameObject currentJoinedTextObject;
+    [SerializeField] private GameObject startGameTextObject;
 
 
     private bool isRoomClosed = false;
@@ -54,5 +56,25 @@ public class ERWaitingZoneManager : MonoBehaviourPun
         PhotonNetwork.CurrentRoom.IsOpen = false;
         PhotonNetwork.CurrentRoom.IsVisible = false;
         Debug.Log("Closing room, 4 players joined.");
+    }
+
+    public void Play()
+    {
+        StartCoroutine(StartPlayingCoroutine());
+    }
+
+    IEnumerator StartPlayingCoroutine()
+    {
+        DeactivateAllTextAndEnableStarting();
+        yield return new WaitForSeconds(3f);
+    }
+
+    private void DeactivateAllTextAndEnableStarting()
+    {
+        allJoinedTextObject.SetActive(false);
+        startNowTextObject.SetActive(false);
+        currentJoinedTextObject.SetActive(false);
+        startGameTextObject.SetActive(true);
+        numberOfPlayersText.gameObject.SetActive(false);
     }
 }
