@@ -15,6 +15,8 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     [SerializeField] private GameObject currentJoinedTextObject;
     [SerializeField] private GameObject startGameTextObject;
 
+    [SerializeField] private ERZone1Spawner eRZone1Spawner;
+
 
     private bool isRoomClosed = false;
 
@@ -27,6 +29,11 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+        if (!PhotonNetwork.InRoom)
+        {
+            return;
+        }
+
         numberOfPlayersText.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
         if (PhotonNetwork.CurrentRoom.PlayerCount == 4)
         {
@@ -67,6 +74,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     {
         DeactivateAllTextAndEnableStarting();
         yield return new WaitForSeconds(3f);
+        eRZone1Spawner.SpawnPlayers();
     }
 
     private void DeactivateAllTextAndEnableStarting()
