@@ -19,6 +19,8 @@ TagManager:
   - Gun
   - HealingOrb
   - SpawnPoint
+  - RedCell
+  - CyanCell
   layers:
   - Default
   - TransparentFX

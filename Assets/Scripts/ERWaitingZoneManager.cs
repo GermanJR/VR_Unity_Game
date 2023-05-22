@@ -65,7 +65,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     {
         PhotonNetwork.CurrentRoom.IsOpen = false;
         PhotonNetwork.CurrentRoom.IsVisible = false;
-        Debug.Log("Closing room, 4 players joined.");
+        Debug.Log("Closing room, 4 players joined or game started.");
     }
 
     public void Play()
@@ -79,6 +79,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
 
     IEnumerator StartPlayingCoroutine()
     {
+        CloseRoom();
         DeactivateAllTextAndEnableStarting();
         photonView.RPC("DeactivateAllTextAndEnableStartingOverNetwork", RpcTarget.Others);
         yield return new WaitForSeconds(3f);
