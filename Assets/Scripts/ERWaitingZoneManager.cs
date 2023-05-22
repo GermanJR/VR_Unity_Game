@@ -15,7 +15,9 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     [SerializeField] private GameObject currentJoinedTextObject;
     [SerializeField] private GameObject startGameTextObject;
 
-    [SerializeField] private ERZone1Spawner eRZone1Spawner;
+    //[SerializeField] private ERZone1Spawner eRZone1Spawner;
+
+    [SerializeField] private Animator doorAnimator;
 
 
     private bool isRoomClosed = false;
@@ -23,7 +25,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Assert(photonView != null);
     }
 
     // Update is called once per frame
@@ -67,22 +69,33 @@ public class ERWaitingZoneManager : MonoBehaviourPun
 
     public void Play()
     {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
         StartCoroutine(StartPlayingCoroutine());
     }
 
     IEnumerator StartPlayingCoroutine()
     {
-        DeactivateAllTextAndEnableStarting();
+        photonView.RPC("DeactivateAllTextAndEnableStartingOverNetwork", RpcTarget.All);
         yield return new WaitForSeconds(3f);
-        eRZone1Spawner.SpawnPlayers();
+        photonView.RPC("OpenDoorOverNetwork", RpcTarget.All);
     }
 
-    private void DeactivateAllTextAndEnableStarting()
+    [PunRPC]
+    private void DeactivateAllTextAndEnableStartingOverNetwork()
     {
         allJoinedTextObject.SetActive(false);
         startNowTextObject.SetActive(false);
         currentJoinedTextObject.SetActive(false);
         startGameTextObject.SetActive(true);
         numberOfPlayersText.gameObject.SetActive(false);
+    }
+
+    [PunRPC]
+    private void OpenDoorOverNetwork()
+    {
+        doorAnimator.SetTrigger("Open");
     }
 }

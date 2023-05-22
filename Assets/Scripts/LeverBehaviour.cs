@@ -9,12 +9,14 @@ public class LeverBehaviour : MonoBehaviour
     public float angleBetweenThreshold = 1f;
     public HingeJoinState status = HingeJoinState.None;
 
+    /*
     public UnityEvent OnMinReached;
     public UnityEvent OnMaxReached;
-
+    */
     public enum HingeJoinState {Min, Max, None}
 
     private HingeJoint hingeJoint;
+    [SerializeField] private ERWaitingZoneManager eRWaitingZoneManager;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +39,8 @@ public class LeverBehaviour : MonoBehaviour
         {
             if(status != HingeJoinState.Min)
             {
-                Debug.Log("Triggering min event.");
-                OnMinReached.Invoke();
+                Debug.Log("Lever on min.");
+                //OnMinReached.Invoke();
             }
             status = HingeJoinState.Min;
         }
@@ -47,7 +49,8 @@ public class LeverBehaviour : MonoBehaviour
             if(status != HingeJoinState.Max)
             {
                 Debug.Log("Triggering MAX event.");
-                OnMaxReached.Invoke();
+                //OnMaxReached.Invoke();
+                eRWaitingZoneManager.Play();
             }
             status = HingeJoinState.Max;
         }
