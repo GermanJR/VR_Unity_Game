@@ -14,6 +14,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     [SerializeField] private GameObject allJoinedTextObject;
     [SerializeField] private GameObject currentJoinedTextObject;
     [SerializeField] private GameObject startGameTextObject;
+    [SerializeField] private GameObject canvasObject;
 
     //[SerializeField] private ERZone1Spawner eRZone1Spawner;
 
@@ -78,9 +79,12 @@ public class ERWaitingZoneManager : MonoBehaviourPun
 
     IEnumerator StartPlayingCoroutine()
     {
-        photonView.RPC("DeactivateAllTextAndEnableStartingOverNetwork", RpcTarget.All);
+        DeactivateAllTextAndEnableStarting();
+        photonView.RPC("DeactivateAllTextAndEnableStartingOverNetwork", RpcTarget.Others);
         yield return new WaitForSeconds(3f);
-        photonView.RPC("OpenDoorOverNetwork", RpcTarget.All);
+        OpenDoor();
+        canvasObject.SetActive(false);
+        photonView.RPC("OpenDoorOverNetwork", RpcTarget.Others);
     }
 
     [PunRPC]
@@ -95,6 +99,21 @@ public class ERWaitingZoneManager : MonoBehaviourPun
 
     [PunRPC]
     private void OpenDoorOverNetwork()
+    {
+        doorAnimator.SetTrigger("Open");
+        canvasObject.SetActive(false);
+    } 
+    
+    private void DeactivateAllTextAndEnableStarting()
+    {
+        allJoinedTextObject.SetActive(false);
+        startNowTextObject.SetActive(false);
+        currentJoinedTextObject.SetActive(false);
+        startGameTextObject.SetActive(true);
+        numberOfPlayersText.gameObject.SetActive(false);
+    }
+
+    private void OpenDoor()
     {
         doorAnimator.SetTrigger("Open");
     }
