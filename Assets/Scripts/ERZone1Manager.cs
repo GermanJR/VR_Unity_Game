@@ -18,17 +18,17 @@ public class ERZone1Manager : MonoBehaviourPun
     private bool redCellCorrect = false;
     private bool cyanCellCorrect = false;
 
-    private bool cellsSpawned = false;
+    //private bool cellsSpawned = false;
     private bool keySpawned = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        key.SetActive(false);
         foreach (Light light in lights)
         {
             light.gameObject.SetActive(false);
         }
-        SpawnCells();
     }
 
     // Update is called once per frame
@@ -67,14 +67,18 @@ public class ERZone1Manager : MonoBehaviourPun
 
     private void SpawnKey()
     {
-        if (!photonView.IsMine || !PhotonNetwork.IsMasterClient)
+        if (!photonView.IsMine)
         {
             return;
         }
 
+        Debug.Log("Spawning key");
+
         int keyIndex = Random.Range(0, cyanCellSpawns.Length);
 
         key.transform.position = keySpawns[keyIndex].position;
+
+        key.SetActive(true);
 
         photonView.RPC("SpawnKeyOverNetwork", RpcTarget.Others, keySpawns[keyIndex]);
     }
@@ -83,6 +87,7 @@ public class ERZone1Manager : MonoBehaviourPun
     private void SpawnKeyOverNetwork(Transform spawnTransform)
     {
         key.transform.position = spawnTransform.position;
+        key.SetActive(true);
     }
 
     public void ChangeForRedCell()
@@ -119,12 +124,14 @@ public class ERZone1Manager : MonoBehaviourPun
         redCellCorrect = true;
     }
 
-    private void SpawnCells()
+    public void SpawnCells()
     {
-        if (!photonView.IsMine || !PhotonNetwork.IsMasterClient)
+        if (!photonView.IsMine)
         {
             return;
         }
+
+        Debug.Log("Spawning cells");
 
         int redCellIndex = Random.Range(0, redCellSpawns.Length);
         int cyanCellIndex = Random.Range(0, cyanCellSpawns.Length);

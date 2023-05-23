@@ -20,13 +20,15 @@ public class ERWaitingZoneManager : MonoBehaviourPun
 
     [SerializeField] private Animator doorAnimator;
 
+    [SerializeField] private ERZone1Manager eRZone1Manager;
+
 
     private bool isRoomClosed = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Assert(photonView != null);
+        
     }
 
     // Update is called once per frame
@@ -86,6 +88,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
         OpenDoor();
         canvasObject.SetActive(false);
         photonView.RPC("OpenDoorOverNetwork", RpcTarget.Others);
+        eRZone1Manager.SpawnCells();
     }
 
     [PunRPC]
