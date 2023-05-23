@@ -33,6 +33,7 @@ public class ERBatterySocketCyan : XRSocketInteractor
 
         if (args.interactableObject.transform.CompareTag("CyanCell"))
         {
+            Debug.Log("CyanCell entered correctly");
             args.interactableObject.transform.gameObject.GetComponent<ERNetworkInteractible>().enabled = false;
             GetComponent<Renderer>().material.color = correctColor;
             photonView.RPC("CorrectBatteryOverNetwork", RpcTarget.Others, args);

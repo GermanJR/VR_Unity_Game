@@ -7,10 +7,13 @@ public class ERZone1Manager : MonoBehaviourPun
 {
     [SerializeField] private GameObject redCell;
     [SerializeField] private GameObject cyanCell;
+    [SerializeField] private GameObject key;
 
     [SerializeField] private Transform[] redCellSpawns;
     [SerializeField] private Transform[] cyanCellSpawns;
     [SerializeField] private Transform[] keySpawns;
+
+    [SerializeField] private Light[] lights;
 
     private bool redCellCorrect = false;
     private bool cyanCellCorrect = false;
@@ -21,22 +24,65 @@ public class ERZone1Manager : MonoBehaviourPun
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (Light light in lights)
+        {
+            light.gameObject.SetActive(false);
+        }
+        SpawnCells();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (redCellCorrect && cyanCellCorrect)
+        if (redCellCorrect && cyanCellCorrect && !keySpawned)
         {
+            RestorePower();
             SpawnKey();
             keySpawned = true;
         }
     }
 
+    private void RestorePower()
+    {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+
+        foreach (Light light in lights)
+        {
+            light.gameObject.SetActive(true);
+        }
+        photonView.RPC("RestorePowerOverNetwork", RpcTarget.Others);
+    }
+
+    [PunRPC]
+    private void RestorePowerOverNetwork()
+    {
+        foreach (Light light in lights)
+        {
+            light.gameObject.SetActive(true);
+        }
+    }
+
     private void SpawnKey()
     {
-        throw new System.NotImplementedException();
+        if (!photonView.IsMine || !PhotonNetwork.IsMasterClient)
+        {
+            return;
+        }
+
+        int keyIndex = Random.Range(0, cyanCellSpawns.Length);
+
+        key.transform.position = keySpawns[keyIndex].position;
+
+        photonView.RPC("SpawnKeyOverNetwork", RpcTarget.Others, keySpawns[keyIndex]);
+    }
+
+    [PunRPC]
+    private void SpawnKeyOverNetwork(Transform spawnTransform)
+    {
+        key.transform.position = spawnTransform.position;
     }
 
     public void ChangeForRedCell()
@@ -75,7 +121,7 @@ public class ERZone1Manager : MonoBehaviourPun
 
     private void SpawnCells()
     {
-        if (!photonView.IsMine)
+        if (!photonView.IsMine || !PhotonNetwork.IsMasterClient)
         {
             return;
         }
