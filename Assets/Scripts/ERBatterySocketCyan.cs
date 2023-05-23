@@ -8,6 +8,7 @@ public class ERBatterySocketCyan : XRSocketInteractor
 {
 
     [SerializeField] private Color correctColor;
+    [SerializeField] private ERZone1Manager eRZone1Manager;
 
     private PhotonView photonView;
 
@@ -35,6 +36,7 @@ public class ERBatterySocketCyan : XRSocketInteractor
             args.interactableObject.transform.gameObject.GetComponent<ERNetworkInteractible>().enabled = false;
             GetComponent<Renderer>().material.color = correctColor;
             photonView.RPC("CorrectBatteryOverNetwork", RpcTarget.Others, args);
+            eRZone1Manager.ChangeForCyanCell();
         }
         base.OnSelectEntered(args);
     }
