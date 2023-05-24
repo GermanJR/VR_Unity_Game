@@ -90,6 +90,30 @@ public class ERCountdownTimer : MonoBehaviourPun
         }
     }
 
+    public void StopTimerForWin()
+    {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+
+        StopCoroutine(TimerCoroutine());
+        photonView.RPC("StopTimerForWinOverNetwork", RpcTarget.Others);
+    }
+
+    [PunRPC]
+    private void StopTimerForWinOverNetwork()
+    {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+
+        StopCoroutine(TimerCoroutine());
+    }
+
+
+
     private void TriggerGameOver()
     {
         throw new NotImplementedException();
