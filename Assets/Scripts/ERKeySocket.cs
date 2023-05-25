@@ -8,6 +8,7 @@ public class ERKeySocket : XRSocketInteractor
 {
 
     [SerializeField] private Animator doorAnimator;
+    [SerializeField] private GameObject keyObject;
 
     private PhotonView photonView;
 
@@ -51,18 +52,17 @@ public class ERKeySocket : XRSocketInteractor
         if (args.interactableObject.transform.CompareTag("Key"))
         {
             doorAnimator.SetTrigger("Open");
-            GameObject key = args.interactableObject.transform.gameObject;
-            key.SetActive(false);
-            photonView.RPC("OpenDoorOverNetwork", RpcTarget.Others, key);
+            keyObject.SetActive(false);
+            photonView.RPC("OpenDoorOverNetwork", RpcTarget.Others);
         }
 
         base.OnSelectEntered(args);
     }
 
     [PunRPC]
-    private void OpenDoorOverNetwork(GameObject key)
+    private void OpenDoorOverNetwork()
     {
-        key.SetActive(false);
+        keyObject.SetActive(false);
         doorAnimator.SetTrigger("Open");
     }
 }
