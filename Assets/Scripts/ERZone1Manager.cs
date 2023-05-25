@@ -15,6 +15,11 @@ public class ERZone1Manager : MonoBehaviourPun
 
     [SerializeField] private Light[] lights;
 
+    [SerializeField] private ERKeySocket eRKeySocket;
+
+    [SerializeField] private Material lightOffMaterial;
+    [SerializeField] private Material lightOnMaterial;
+
     private bool redCellCorrect = false;
     private bool cyanCellCorrect = false;
 
@@ -27,6 +32,7 @@ public class ERZone1Manager : MonoBehaviourPun
         key.SetActive(false);
         foreach (Light light in lights)
         {
+            light.transform.parent.gameObject.GetComponent<Renderer>().material = lightOffMaterial;
             light.gameObject.SetActive(false);
         }
     }
@@ -38,6 +44,7 @@ public class ERZone1Manager : MonoBehaviourPun
         {
             RestorePower();
             SpawnKey();
+            eRKeySocket.ActivateSocket();
             keySpawned = true;
         }
     }
@@ -51,7 +58,9 @@ public class ERZone1Manager : MonoBehaviourPun
 
         foreach (Light light in lights)
         {
+            Debug.Log("Restored a light");
             light.gameObject.SetActive(true);
+            light.transform.parent.gameObject.GetComponent<Renderer>().material = lightOnMaterial;
         }
         photonView.RPC("RestorePowerOverNetwork", RpcTarget.Others);
     }
@@ -62,6 +71,7 @@ public class ERZone1Manager : MonoBehaviourPun
         foreach (Light light in lights)
         {
             light.gameObject.SetActive(true);
+            light.transform.parent.gameObject.GetComponent<Renderer>().material = lightOnMaterial;
         }
     }
 
@@ -74,19 +84,19 @@ public class ERZone1Manager : MonoBehaviourPun
 
         Debug.Log("Spawning key");
 
-        int keyIndex = Random.Range(0, cyanCellSpawns.Length);
+        int keyIndex = Random.Range(0, keySpawns.Length);
 
         key.transform.position = keySpawns[keyIndex].position;
 
         key.SetActive(true);
 
-        photonView.RPC("SpawnKeyOverNetwork", RpcTarget.Others, keySpawns[keyIndex]);
+        photonView.RPC("SpawnKeyOverNetwork", RpcTarget.Others, keySpawns[keyIndex].position);
     }
 
     [PunRPC]
-    private void SpawnKeyOverNetwork(Transform spawnTransform)
+    private void SpawnKeyOverNetwork(Vector3 spawnTransform)
     {
-        key.transform.position = spawnTransform.position;
+        key.transform.position = spawnTransform;
         key.SetActive(true);
     }
 
@@ -114,14 +124,14 @@ public class ERZone1Manager : MonoBehaviourPun
             return;
         }
 
-        redCellCorrect = true;
+        cyanCellCorrect = true;
         photonView.RPC("ChangeForCyanCellOverNetwork", RpcTarget.Others);
     }
 
     [PunRPC]
     private void ChangeForCyanCellOverNetwork()
     {
-        redCellCorrect = true;
+        cyanCellCorrect = true;
     }
 
     public void SpawnCells()

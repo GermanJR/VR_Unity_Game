@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ERBatterySocketCyan : XRSocketInteractor
 {
-
+    [SerializeField] private GameObject correctCyanCell;
     [SerializeField] private Color correctColor;
     [SerializeField] private ERZone1Manager eRZone1Manager;
 
@@ -34,18 +34,18 @@ public class ERBatterySocketCyan : XRSocketInteractor
         if (args.interactableObject.transform.CompareTag("CyanCell"))
         {
             Debug.Log("CyanCell entered correctly");
-            args.interactableObject.transform.gameObject.GetComponent<ERNetworkInteractible>().enabled = false;
+            correctCyanCell.GetComponent<ERNetworkInteractible>().enabled = false;
             GetComponent<Renderer>().material.color = correctColor;
-            photonView.RPC("CorrectBatteryOverNetwork", RpcTarget.Others, args);
+            photonView.RPC("CorrectBatteryOverNetwork", RpcTarget.Others);
             eRZone1Manager.ChangeForCyanCell();
         }
         base.OnSelectEntered(args);
     }
 
     [PunRPC]
-    private void CorrectBatteryOverNetwork(SelectEnterEventArgs args)
+    private void CorrectBatteryOverNetwork()
     {
-        args.interactableObject.transform.gameObject.GetComponent<ERNetworkInteractible>().enabled = false;
+        correctCyanCell.GetComponent<ERNetworkInteractible>().enabled = false;
         GetComponent<Renderer>().material.color = correctColor;
     }
 }
