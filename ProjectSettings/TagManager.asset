@@ -21,6 +21,7 @@ TagManager:
   - SpawnPoint
   - RedCell
   - CyanCell
+  - GameOver
   layers:
   - Default
   - TransparentFX

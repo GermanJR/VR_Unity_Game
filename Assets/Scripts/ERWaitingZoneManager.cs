@@ -21,6 +21,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     [SerializeField] private Animator doorAnimator;
 
     [SerializeField] private ERZone1Manager eRZone1Manager;
+    [SerializeField] private ERCountdownTimer eRCountdownTimer;
 
 
     private bool isRoomClosed = false;
@@ -89,6 +90,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
         canvasObject.SetActive(false);
         photonView.RPC("OpenDoorOverNetwork", RpcTarget.Others);
         eRZone1Manager.SpawnCells();
+        eRCountdownTimer.StartTimer();
     }
 
     [PunRPC]

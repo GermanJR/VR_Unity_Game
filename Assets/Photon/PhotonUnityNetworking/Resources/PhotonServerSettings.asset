@@ -76,6 +76,8 @@ MonoBehaviour:
   - RestorePowerOverNetwork
   - StartTimerOverNetwork
   - UpdateTimeLeftInterfaceOverNetwork
+  - StopTimerForWinOverNetwork
+  - TriggerGameOverOverNetwork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

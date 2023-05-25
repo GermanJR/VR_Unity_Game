@@ -7,9 +7,14 @@ using UnityEngine;
 
 public class ERCountdownTimer : MonoBehaviourPun
 {
+    [SerializeField] private GameObject[] gameOverFloors;
+
+    [SerializeField] private Transform[] gameOverSpawnPoints;
 
     [SerializeField] private int time;
     [SerializeField] private TMP_Text timeLeftText;
+
+    private bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +25,7 @@ public class ERCountdownTimer : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        if (time <= 0)
+        if (time <= 0 && !gameOver)
         {
             StopCoroutine(TimerCoroutine());
             TriggerGameOver();
@@ -116,6 +121,45 @@ public class ERCountdownTimer : MonoBehaviourPun
 
     private void TriggerGameOver()
     {
-        throw new NotImplementedException();
+        if (!photonView.IsMine)
+        {
+            return;
+        }
+
+        foreach (GameObject floor in gameOverFloors)
+        {
+            floor.tag = "GameOver";
+        }
+
+        GameObject[] currentPlayers = GameObject.FindGameObjectsWithTag("Player");
+        int spawnIndex = 0;
+
+        Debug.Log("Game Over, players found = " + currentPlayers.Length);
+
+        foreach (GameObject player in currentPlayers)
+        {
+            player.transform.position = gameOverSpawnPoints[spawnIndex].position;
+            spawnIndex++;
+        }
+        gameOver = true;
+        photonView.RPC("TriggerGameOverOverNetwork", RpcTarget.Others);
+    }
+
+    [PunRPC]
+    private void TriggerGameOverOverNetwork()
+    {
+        foreach (GameObject floor in gameOverFloors)
+        {
+            floor.tag = "GameOver";
+        }
+
+        GameObject[] currentPlayers = GameObject.FindGameObjectsWithTag("Player");
+        int spawnIndex = 0;
+        foreach (GameObject player in currentPlayers)
+        {
+            player.transform.position = gameOverSpawnPoints[spawnIndex].position;
+            spawnIndex++;
+        }
+        gameOver = true;
     }
 }
