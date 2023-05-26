@@ -22,7 +22,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
 
     [SerializeField] private ERZone1Manager eRZone1Manager;
     [SerializeField] private ERCountdownTimer eRCountdownTimer;
-
+    [SerializeField] private ERMusicManager musicManager;
 
     private bool isRoomClosed = false;
 
@@ -84,6 +84,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     {
         CloseRoom();
         DeactivateAllTextAndEnableStarting();
+        musicManager.FadeToPlayMusic();
         photonView.RPC("DeactivateAllTextAndEnableStartingOverNetwork", RpcTarget.Others);
         yield return new WaitForSeconds(3f);
         OpenDoor();
@@ -101,6 +102,7 @@ public class ERWaitingZoneManager : MonoBehaviourPun
         currentJoinedTextObject.SetActive(false);
         startGameTextObject.SetActive(true);
         numberOfPlayersText.gameObject.SetActive(false);
+        musicManager.FadeToPlayMusic();
     }
 
     [PunRPC]
@@ -108,8 +110,8 @@ public class ERWaitingZoneManager : MonoBehaviourPun
     {
         doorAnimator.SetTrigger("Open");
         canvasObject.SetActive(false);
-    } 
-    
+    }
+
     private void DeactivateAllTextAndEnableStarting()
     {
         allJoinedTextObject.SetActive(false);

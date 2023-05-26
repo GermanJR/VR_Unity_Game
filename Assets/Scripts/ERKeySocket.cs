@@ -9,14 +9,20 @@ public class ERKeySocket : XRSocketInteractor
 
     [SerializeField] private Animator doorAnimator;
     [SerializeField] private GameObject keyObject;
+    [SerializeField] private GameObject sphereLock;
+    [SerializeField] private GameObject capsuleLock;
+    [SerializeField] private ERMusicManager musicManager;
 
     private PhotonView photonView;
+
+    private AudioSource openSound;
 
     // Start is called before the first frame update
     protected override void Start()
     {
         photonView = GetComponent<PhotonView>();
         socketActive = false;
+        openSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +59,11 @@ public class ERKeySocket : XRSocketInteractor
         {
             doorAnimator.SetTrigger("Open");
             keyObject.SetActive(false);
+            openSound.Play();
+            Debug.Log("Playing open sound");
+            musicManager.ReturnToWaitingMusic();
+            sphereLock.SetActive(false);
+            capsuleLock.SetActive(false);
             photonView.RPC("OpenDoorOverNetwork", RpcTarget.Others);
         }
 
@@ -64,5 +75,9 @@ public class ERKeySocket : XRSocketInteractor
     {
         keyObject.SetActive(false);
         doorAnimator.SetTrigger("Open");
+        sphereLock.SetActive(false);
+        capsuleLock.SetActive(false);
+        openSound.Play();
+        musicManager.ReturnToWaitingMusic();
     }
 }
