@@ -15,6 +15,7 @@ public class ERCountdownTimer : MonoBehaviourPun
     [SerializeField] private TMP_Text timeLeftText;
 
     private bool gameOver = false;
+    private bool playerWon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +26,30 @@ public class ERCountdownTimer : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
+        if (playerWon)
+        {
+            return;
+        }
         if (time <= 0 && !gameOver)
         {
             StopCoroutine(TimerCoroutine());
             TriggerGameOver();
         }
     }
+
+    public void Win()
+    {
+        playerWon = true;
+        photonView.RPC("WinOverNetwork", RpcTarget.Others);
+    }
+
+    [PunRPC]
+    private void WinOverNetwork()
+    {
+        playerWon = true;
+    }
+
+
 
     public void StartTimer()
     {

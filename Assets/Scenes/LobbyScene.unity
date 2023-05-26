@@ -16099,7 +16099,7 @@ RectTransform:
   m_GameObject: {fileID: 1237956641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8041676, y: 1.8041676, z: 1.8041676}
+  m_LocalScale: {x: 1.4852269, y: 1.4852269, z: 1.4852269}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1770618976}
@@ -16107,7 +16107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 251, y: -198}
+  m_AnchoredPosition: {x: 219, y: -202}
   m_SizeDelta: {x: 176.81049, y: 105.6478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237956643
@@ -16130,7 +16130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1-4 '
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 925c6e29b4f9eb9448b6bb85fe4c5f79, type: 2}
   m_sharedMaterial: {fileID: 8211226735857506296, guid: 925c6e29b4f9eb9448b6bb85fe4c5f79,
@@ -17264,7 +17264,7 @@ MonoBehaviour:
     maxPlayers: 2
   - name: EscapeRoom
     sceneIndex: 5
-    maxPlayers: 4
+    maxPlayers: 1
   roomUI: {fileID: 1323538744}
 --- !u!4 &1330290403
 Transform:
@@ -17830,8 +17830,7 @@ MonoBehaviour:
     CAN YOU FIND THE EXIT?
 
 
-    THIS ROOM CAN BE PLAYED ON SINGLEPLAYER
-    OR UP TO FOUR PLAYERS.'
+    THIS ROOM IS SINGLEPLAYER.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 970073bd576919d40be9267772fd37e4, type: 2}
   m_sharedMaterial: {fileID: -2340409978274868328, guid: 970073bd576919d40be9267772fd37e4,

@@ -12,6 +12,7 @@ public class ERKeySocket : XRSocketInteractor
     [SerializeField] private GameObject sphereLock;
     [SerializeField] private GameObject capsuleLock;
     [SerializeField] private ERMusicManager musicManager;
+    [SerializeField] private ERCountdownTimer eRCountdownTimer;
 
     private PhotonView photonView;
 
@@ -65,6 +66,7 @@ public class ERKeySocket : XRSocketInteractor
             sphereLock.SetActive(false);
             capsuleLock.SetActive(false);
             photonView.RPC("OpenDoorOverNetwork", RpcTarget.Others);
+            eRCountdownTimer.Win();
         }
 
         base.OnSelectEntered(args);

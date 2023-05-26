@@ -79,6 +79,7 @@ MonoBehaviour:
   - StopTimerForWinOverNetwork
   - TriggerGameOverOverNetwork
   - ActivateSocketOverNetwork
+  - WinOverNetwork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
