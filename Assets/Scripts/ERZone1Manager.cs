@@ -149,7 +149,7 @@ public class ERZone1Manager : MonoBehaviourPun
         int[] positions = { redCellIndex, cyanCellIndex };
 
         redCell.transform.position = redCellSpawns[positions[0]].position;
-        cyanCell.transform.position = redCellSpawns[positions[1]].position;
+        cyanCell.transform.position = cyanCellSpawns[positions[1]].position;
 
         photonView.RPC("SpawnCellsOverNetwork", RpcTarget.Others, positions);
     }

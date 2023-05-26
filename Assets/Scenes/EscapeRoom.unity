@@ -18138,7 +18138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 510172185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttatchTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25626,8 +25626,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d07d313a811f1c499b2508c902ae6ce,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d07d313a811f1c499b2508c902ae6ce,
+        type: 3}
       propertyPath: m_TagString
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022215874312191456, guid: 8d07d313a811f1c499b2508c902ae6ce,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d07d313a811f1c499b2508c902ae6ce, type: 3}
