@@ -32344,9 +32344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'USE THE LEVER TO START NOW
-
-    (ONLY PLAYER 1)'
+  m_text: USE THE LEVER TO START NOW
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 925c6e29b4f9eb9448b6bb85fe4c5f79, type: 2}
   m_sharedMaterial: {fileID: 8211226735857506296, guid: 925c6e29b4f9eb9448b6bb85fe4c5f79,
@@ -33997,7 +33995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1019461308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56656,7 +56654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1753786068
 RectTransform:
   m_ObjectHideFlags: 0
