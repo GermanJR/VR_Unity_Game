@@ -23,6 +23,7 @@ TagManager:
   - CyanCell
   - GameOver
   - Key
+  - LobbyTrigger
   layers:
   - Default
   - TransparentFX
