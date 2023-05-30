@@ -11453,7 +11453,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16383
 --- !u!114 &393457841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30833,8 +30833,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289991680
-  m_fontColor: {r: 0, g: 0.07973955, b: 0.7075472, a: 1}
+    rgba: 4278255603
+  m_fontColor: {r: 0.95149136, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
