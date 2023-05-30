@@ -65,6 +65,21 @@ MonoBehaviour:
   - UnableDeadPlayerBarOverNetwork
   - MakeRivalWinOverNetwork
   - DestroyOrbOverNetwork
+  - DeactivateAllTextAndEnableStartingOverNetwork
+  - OpenDoorOverNetwork
+  - TurnLightOverNetwork
+  - CorrectBatteryOverNetwork
+  - SpawnCellsOverNetwork
+  - ChangeForCyanCellOverNetwork
+  - ChangeForRedCellOverNetwork
+  - SpawnKeyOverNetwork
+  - RestorePowerOverNetwork
+  - StartTimerOverNetwork
+  - UpdateTimeLeftInterfaceOverNetwork
+  - StopTimerForWinOverNetwork
+  - TriggerGameOverOverNetwork
+  - ActivateSocketOverNetwork
+  - WinOverNetwork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

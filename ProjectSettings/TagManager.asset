@@ -18,6 +18,11 @@ TagManager:
   - M4Bullet
   - Gun
   - HealingOrb
+  - SpawnPoint
+  - RedCell
+  - CyanCell
+  - GameOver
+  - Key
   layers:
   - Default
   - TransparentFX

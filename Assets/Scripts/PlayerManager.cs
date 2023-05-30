@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.CountOfPlayers == 2)
         {
-            Debug.Log("Both players joined!.");
+            //Debug.Log("Both players joined!.");
         }
         base.OnJoinedRoom();
     }

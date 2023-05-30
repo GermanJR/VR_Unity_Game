@@ -35,7 +35,7 @@ public class RoomsUIBehaviour : MonoBehaviour
     public void SelectRoom(int index)
     {
         previousButton.interactable = (index != 0);
-        nextButton.interactable = (index != transform.childCount - 6);
+        nextButton.interactable = (index != transform.childCount - 7);
 
         for (int i = 0; i < transform.childCount; i++)
         {
