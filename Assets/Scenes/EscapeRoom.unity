@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 2b95fb9e2a836c34bb2fde7db1e955ae
+  m_OcclusionCullingData: {fileID: 36300000, guid: d6b9c82f2650b7f4f9768d67dc9c4b04,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -534,6 +535,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9618479}
     m_Modifications:
+    - target: {fileID: 1538852660, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1538852663, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
       propertyPath: m_Color.b
       value: 0.49411765
@@ -572,6 +577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616442259218, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 426679616936695476, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
         type: 3}
@@ -632,6 +642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SphereLightDarkRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616936695480, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
@@ -9582,7 +9597,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &137648782
 Transform:
@@ -10219,7 +10234,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &178463406
 Transform:
@@ -10344,7 +10359,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &179711286
 Transform:
@@ -11255,7 +11270,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &212122449
 RectTransform:
@@ -16905,7 +16920,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &478012469
 Transform:
@@ -17906,7 +17921,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &504450774
 Transform:
@@ -18167,6 +18182,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9618479}
     m_Modifications:
+    - target: {fileID: 1538852660, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1538852663, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
       propertyPath: m_Color.b
       value: 0.49411765
@@ -18205,6 +18224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616442259218, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 426679616936695476, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
         type: 3}
@@ -18265,6 +18289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SphereLightDarkRed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616936695480, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
@@ -18500,7 +18529,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &549773148
 RectTransform:
@@ -20370,7 +20399,7 @@ PrefabInstance:
     - target: {fileID: 519728637440476357, guid: a420ff7807f02304f8140103cdbf3067,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 519728637440476366, guid: a420ff7807f02304f8140103cdbf3067,
         type: 3}
@@ -22270,6 +22299,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9618479}
     m_Modifications:
+    - target: {fileID: 1538852660, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1538852663, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
       propertyPath: m_Color.b
       value: 0.49411765
@@ -22308,6 +22341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616442259218, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 426679616936695476, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
         type: 3}
@@ -22368,6 +22406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SphereLightDarkRed (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616936695480, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
@@ -25485,7 +25528,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &768671537
 Transform:
@@ -30918,7 +30961,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &949972731
 Transform:
@@ -34130,7 +34173,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1020747968
 RectTransform:
@@ -34731,7 +34774,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1057295900
 Transform:
@@ -48962,7 +49005,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1481626507
 Transform:
@@ -49197,6 +49240,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9618479}
     m_Modifications:
+    - target: {fileID: 1538852660, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1538852663, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
       propertyPath: m_Color.b
       value: 0.49411765
@@ -49235,6 +49282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616442259218, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 426679616936695476, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
         type: 3}
@@ -49295,6 +49347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SphereLightDarkRed (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426679616936695480, guid: fa3cac907a9b5ba42a96d0b07d690ef0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3cac907a9b5ba42a96d0b07d690ef0, type: 3}
@@ -51473,7 +51530,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1555648115
 RectTransform:
@@ -53474,7 +53531,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1646943990
 Transform:
@@ -58638,7 +58695,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1798426038
 RectTransform:
@@ -61959,7 +62016,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1895518470
 Transform:
@@ -63933,7 +63990,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &2003747968
 RectTransform:
