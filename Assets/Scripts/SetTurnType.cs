@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,15 +11,26 @@ public class SetTurnType : MonoBehaviour
 
     public void SetTypeFromIndex(int index)
     {
-        if (index == 0)
+        try
         {
-            snapTurn.enabled = false;
-            continuousTurn.enabled = true;
+            if (index == 0)
+            {
+                snapTurn.enabled = false;
+                continuousTurn.enabled = true;
+            }
+            else if (index == 1)
+            {
+                snapTurn.enabled = true;
+                continuousTurn.enabled = false;
+            }
         }
-        else if (index == 1)
+        catch (NullReferenceException e)
         {
-            snapTurn.enabled = true;
-            continuousTurn.enabled = false;
+            Debug.LogError("Error changin turn type." + e.Message);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Turn type: Unexpected error -> " + e.Message);
         }
     }
 }
